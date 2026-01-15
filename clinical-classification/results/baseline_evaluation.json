@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-01-15T14:15:59.752748",
+  "overall_accuracy": {
+    "baseline": 0.5714285714285714,
+    "semi_supervised": 0.7142857142857143,
+    "ensemble": 0.8571428571428571
+  },
+  "per_class_performance": [
+    {
+      "class": "Neither",
+      "count": 6,
+      "baseline_recall": 0.5714285714285714,
+      "semisup_recall": 0.7142857142857143,
+      "ensemble_recall": 0.8333333333333334
+    },
+    {
+      "class": "Cancer Only",
+      "count": 5,
+      "baseline_recall": 0.5714285714285714,
+      "semisup_recall": 0.7142857142857143,
+      "ensemble_recall": 0.8
+    },
+    {
+      "class": "Diabetes Only",
+      "count": 2,
+      "baseline_recall": 0.5714285714285714,
+      "semisup_recall": 0.7142857142857143,
+      "ensemble_recall": 1.0
+    },
+    {
+      "class": "Both",
+      "count": 1,
+      "baseline_recall": 0.5714285714285714,
+      "semisup_recall": 0.7142857142857143,
+      "ensemble_recall": 1.0
+    }
+  ],
+  "classification_report": {
+    "Both": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "Cancer Only": {
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1-score": 0.8,
+      "support": 5.0
+    },
+    "Diabetes Only": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "Neither": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8333333333333334,
+      "support": 6.0
+    },
+    "accuracy": 0.8571428571428571,
+    "macro avg": {
+      "precision": 0.9083333333333333,
+      "recall": 0.9083333333333333,
+      "f1-score": 0.9083333333333333,
+      "support": 14.0
+    },
+    "weighted avg": {
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.8571428571428571,
+      "support": 14.0
+    }
+  },
+  "training_metadata": {
+    "n_baseline_train": 36,
+    "n_semisup_train": 903,
+    "n_synthetic": 867,
+    "baseline_neither_pct": 0.5833333333333334
+  },
+  "decision_strategy": {
+    "tier_1": "REGEX - Override when keywords present",
+    "tier_2": "AGREEMENT - Use when models agree",
+    "tier_3": "MODEL STRENGTHS - Route to specialized model",
+    "tier_4": "WEIGHTED VOTING - Fallback with balanced weights"
+  }
+}

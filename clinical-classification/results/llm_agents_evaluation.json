@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-01-15T15:49:39.563229",
+  "model": "LLM Three-Agent System",
+  "overall_accuracy": 0.8571428571428571,
+  "total_cases": 14,
+  "per_class_metrics": {
+    "Neither": {
+      "count": 6,
+      "correct": 6,
+      "recall": 1.0
+    },
+    "Cancer Only": {
+      "count": 5,
+      "correct": 3,
+      "recall": 0.6
+    },
+    "Diabetes Only": {
+      "count": 2,
+      "correct": 2,
+      "recall": 1.0
+    },
+    "Both": {
+      "count": 1,
+      "correct": 1,
+      "recall": 1.0
+    }
+  },
+  "avg_initial_confidence": 0.9642857142857144,
+  "avg_final_confidence": 0.9857142857142855,
+  "cases_changed": 0,
+  "classification_report": {
+    "Both": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "Cancer Only": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1-score": 0.75,
+      "support": 5.0
+    },
+    "Diabetes Only": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "Neither": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1-score": 0.8571428571428571,
+      "support": 6.0
+    },
+    "accuracy": 0.8571428571428571,
+    "macro avg": {
+      "precision": 0.9375,
+      "recall": 0.9,
+      "f1-score": 0.9017857142857143,
+      "support": 14.0
+    },
+    "weighted avg": {
+      "precision": 0.8928571428571429,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.8494897959183673,
+      "support": 14.0
+    }
+  }
+}

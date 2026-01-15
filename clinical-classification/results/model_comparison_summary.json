@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-01-15T16:37:13.987322",
+  "total_cases": 200,
+  "note": "Test set has no ground truth labels - comparison focuses on prediction differences and confidence",
+  "prediction_distribution": {
+    "Both": {
+      "baseline_pct": 3.0,
+      "llm_pct": 2.5,
+      "difference": -0.5
+    },
+    "Cancer Only": {
+      "baseline_pct": 52.0,
+      "llm_pct": 28.999999999999996,
+      "difference": -23.000000000000004
+    },
+    "Diabetes Only": {
+      "baseline_pct": 11.5,
+      "llm_pct": 11.5,
+      "difference": 0.0
+    },
+    "Neither": {
+      "baseline_pct": 33.5,
+      "llm_pct": 56.99999999999999,
+      "difference": 23.499999999999993
+    }
+  },
+  "disagreements": {
+    "total_cases": 200,
+    "agreements": 136,
+    "disagreements": 64,
+    "agreement_rate": 0.68
+  },
+  "confidence": {
+    "baseline_mean": 0.7442358902286536,
+    "baseline_std": 0.29394931862333024,
+    "llm_mean": 0.9882499999999999,
+    "llm_std": 0.022958067521496855,
+    "agreement_baseline_conf": 0.7122652730511791,
+    "agreement_llm_conf": 0.9911764705882353,
+    "disagreement_baseline_conf": 0.812173451730787,
+    "disagreement_llm_conf": 0.98203125
+  },
+  "high_confidence_disagreements": 44
+}

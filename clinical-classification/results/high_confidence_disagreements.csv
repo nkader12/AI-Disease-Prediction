@@ -1,0 +1,1020 @@
+patient_id,text,baseline_prediction,baseline_confidence,llm_prediction,pred_has_cancer,pred_has_diabetes,llm_confidence,initial_classification,decision_rationale
+2079,"Discharge summary:
+
+Patient Name: [REDACTED]
+Medical Record Number: [REDACTED]
+Date of Admission: [REDACTED]
+Date of Discharge: [REDACTED]
+Admitting Diagnosis: Adrenal mass, Dextrocardia
+Principal Diagnosis at Discharge: Adrenocortical adenoma
+
+Hospital Course:
+The patient was admitted to the hospital with an incidental finding of an adrenal mass along with a complaint of intermittent nausea and blurred vision. The patient had a history of SIT, diabetes mellitus type 2, and significant hypertension.
+
+During the course of the hospital stay, the patient underwent a retrolaparoscopic adrenalectomy to remove the tumor. The surgery went well, and the estimated blood loss was minimal. The final pathological diagnosis indicated adrenocortical adenoma without gross extracapsular invasion. The postoperative course was uneventful, and the patient was discharged on postoperative day 4.
+
+Clinical Findings:
+Laboratory tests showed normal levels of serum potassium concentration, renin activity, plasma cortisol, and aldosterone concentrations. No abnormalities were found in the levels of urinary catecholamines and vanillylmandelic. The chest X-ray image revealed dextrocardia. CT scan confirmed the diagnosis of SIT, presenting the round-shaped mass on the right adrenal gland with the size of 10.2 × 9.4 × 7.9 cm. The three-dimensional digital model (3D-DM) was reconstructed to facilitate surgical orientation and improve manipulating accuracy.
+
+Discharge Medications:
+[REDACTED]
+
+Follow-up Instructions:
+The patient is instructed to follow up with the appropriate healthcare provider for further management of the adrenocortical adenoma. No further specific instructions were given at the time of discharge.
+
+Discharge Condition:
+The patient was discharged in stable condition.",Both,1.0,Diabetes Only,0.0,1.0,1.0,Diabetes Only,"The retrieval context was not provided, so the decision relies on the initial classification and direct text analysis. The initial classification confidently identified diabetes based on the explicit mention of ""diabetes mellitus type 2"" in the discharge summary, which aligns with the diagnostic criteria for a current diabetes diagnosis. The patient text confirms the presence of a benign adrenocortical adenoma, with no evidence of malignancy or cancer treatment, supporting the absence of cancer. Therefore, the final classification is diabetes only, with high confidence."
+1385,"DISCHARGE SUMMARY:
+
+Patient Name: Not Provided
+
+Medical Record Number: Not Provided 
+
+Admission Date: Not Provided 
+
+Discharge Date: Not Applicable 
+
+Reason for Hospitalization:
+The patient was admitted to the Infectious Diseases Unit with complaints of weight loss, cough with hemoptysis, diarrhea, fever, and cervical adenopathies under investigation. She had a past medical history of uterine cancer, herpes-zoster infection, and recent diagnosis of HIV infection.
+
+Hospital Course:
+During physical examination, the patient presented with cachexia, tenderness at the palpation of the hypogastric region, and cardiorespiratory arrest. Advanced resuscitation measures were performed, and she was transferred to the emergency room where orotracheal intubation and mechanical ventilation were initiated. She was subsequently diagnosed with enteric peritonitis, ileal perforation, and large cavity obstruction which required a segmental enterectomy.
+
+Postoperatively, the patient was admitted to the intensive care unit and broad-spectrum antibiotic therapy was initiated. However, despite the treatment, the patient's clinical condition continued to deteriorate, and she eventually passed away on the same day.
+
+Diagnostic Tests:
+Diagnostic tests revealed a low CD4+ cell count as well as viral load of HIV by PCR. CT scans showed diffuse parietal thickening, dilatation of the intestinal loops of the jejunum with splenic infarction, and pneumoperitoneum. Blood tests showed raised creatinine, pancreatic amylase, pancreatic lipase, and seric lactates, as well as raised white blood cell count and low hemoglobin.
+
+Final Diagnosis:
+The post-mortem histological examination revealed acute transmural inflammation of the enteric wall with suppuration and necrosis with fungal hyphae of the Aspergillus spp. type, and overinfection of Candida albicans, Enterococcus faecium, and Escherichia coli. There were no imaging findings to suggest malignancy, angioinvasion, or epithelioid granulomas.
+
+Disposition and Follow-up:
+The patient passed away during the hospitalization, and no follow-up care is required.
+
+Discharge Medications:
+Not Applicable
+
+Follow-up Diagnostic Tests:
+Not Applicable
+
+Primary Care Provider:
+Not Applicable",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, citing a lack of evidence for current active malignancy or diabetes-related criteria. The patient discharge summary supports this, as it mentions a past history of uterine cancer with no current signs of malignancy and no mention of diabetes or related treatments. The post-mortem findings and diagnostic tests further confirm the absence of active cancer or diabetes, leading to a high-confidence classification of neither condition."
+224,"DISCHARGE SUMMARY
+
+Patient Name: N/A
+Date of Birth: N/A
+Date of Admission: N/A
+Date of Discharge: N/A
+Reason for Admission: N/A
+
+HOSPITAL COURSE:
+
+This patient is a 37-year-old woman with Autism Spectrum Disorder (ASD) who provided home care for her mother who had end-stage breast cancer. Her father was visually impaired, and the daughter was the main caregiver. The home care staff initially had difficulty contacting and communicating with her as she often focused on household tasks such as dishwashing.
+
+After the diagnosis of ASD was disclosed, the patient received consultation and social skill training at an outpatient clinic to improve her communication, scheduling, and caregiving abilities. Inappropriate behavior decreased following explanations and making communication rules with the patient.
+
+The patient's mother's condition worsened, and she required opioids for pain control. The patient was able to communicate with the home care staff effectively and provide appropriate care during this time. Unfortunately, the patient's mother passed away at home.
+
+DISCHARGE CONDITION:
+
+The patient is being discharged from care and services as her mother has passed away.
+
+FOLLOW-UP RECOMMENDATIONS:
+
+No further follow-up recommendations are needed at this time.
+
+DISCHARGE INSTRUCTIONS:
+
+We extend our sincerest condolences to the patient and her family. If the patient requires further assistance with grief counseling or support, she is encouraged to contact her primary care physician for further recommendations.
+
+Signed:
+
+[Name and Signature of Discharge Physician]
+[Date and Time of Discharge]",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, with a reasoning that aligns with the diagnostic criteria. The discharge summary explicitly focuses on the patient's role as a caregiver for her mother with end-stage breast cancer and does not mention any health conditions related to cancer or diabetes for the patient herself. There are no lab values, treatments, or explicit diagnoses in the patient text that suggest the presence of either condition. Therefore, the final classification is neither, with high confidence."
+2040,"Discharge Summary:
+
+Patient Name: [Redacted]
+Medical Record Number: [Redacted]
+Date of Admission: [Redacted]
+Date of Discharge: [Redacted]
+Diagnosis: Hypertrophic Olivary Degeneration (HOD)
+
+Hospital Course:
+The 55-year-old female patient presented to the neurologist due to vertigo and tinnitus. Clinical examination revealed an obvious palatal myoclonus. Magnetic resonance imaging (MRI) of the brain was performed, and T2-weighted and fluid-attenuated inversion recovery (FLAIR) images showed focal hyperintensity and expansion of both medullary olives. The radiologic findings confirmed a diagnosis of Hypertrophic Olivary Degeneration (HOD). The etiology was not determined as the patient had no history of infarction, hemorrhage, tumor, or trauma.
+
+Clinical Symptoms:
+The patient reported experiencing vertigo and tinnitus. Clinical examination revealed an obvious palatal myoclonus.
+
+Diagnostic Tests:
+Magnetic resonance imaging (MRI) of the brain was performed, which showed focal hyperintensity and expansion of both medullary olives.
+
+Diagnosis:
+Based on the patient's clinical symptoms and radiologic findings, the diagnosis of Hypertrophic Olivary Degeneration (HOD) was confirmed.
+
+Treatment:
+No specific treatment was prescribed during the hospitalization as the patient had no significant acute symptoms that required treatment.
+
+Follow-up Care:
+The patient was advised to follow-up with the neurologist for further evaluation and management of her condition.
+
+Discharge Condition:
+On the day of discharge, the patient was in stable condition.
+
+Follow-up Appointments:
+The patient was advised to make follow-up appointments with the neurologist for further evaluation and management of her condition.
+
+Signed by: [Redacted]",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently determined that the patient has neither cancer nor diabetes, with a confidence level of 1.0. The reasoning was sound, as the discharge summary explicitly states there is no history of tumor, malignancy, or diabetes-related symptoms or treatments. The patient was diagnosed with Hypertrophic Olivary Degeneration (HOD), and there were no lab values or treatments indicative of cancer or diabetes. Therefore, the final classification is ""Neither"" for both conditions, with high confidence."
+1595,"Discharge Summary:
+
+Hospital Course:
+
+The patient, a 34-year-old mother of two children in her 29th week of pregnancy, was admitted with hypertension and diagnosed with gdma2. She experienced hyperadrenergic spells associated with episodic palpitation, headache, and sweating. A multidisciplinary team meeting was held to decide on the management of her pregnancy. She was prescribed medications to control her blood pressure and blood sugar.
+
+Her delivery was done by elective caesarean section at 36 weeks of gestation. Peripartum period was uneventful. After one month postpartum, the patient presented with a sudden onset headache and vomiting. She was transferred to the neurosurgical unit where she was diagnosed with multiloculated cystic lesions suggestive of cerebellar hemangioblastomas. She was given ventriculoperitoneal shunting as an emergency procedure, followed by laparoscopic right adrenalectomy to remove the right-sided adrenal pheochromocytoma.
+
+The patient was discharged 12 days postoperatively after close maternal and neonatal surveillance, with regular monitoring of blood pressure and twice a day premixed insulin and self-monitoring of blood sugar. She was advised to attend ophthalmology follow-up for a lesion suggestive of retinal hemangioblastoma. Neurosurgical follow-up is required for the cerebellar hemangioblastomas, and she is currently asymptomatic.
+
+Diagnosis:
+
+The patient was diagnosed with hypertension during pregnancy and gdma2. Further investigations revealed a right-sided adrenal tumor of 66x59mm in size, suggestive of pheochromocytoma, which was removed by laparoscopic right adrenalectomy.
+
+Follow-Up:
+
+The patient is currently under close surveillance at the neurosurgical clinic with regular MRI. At 6 months, MRI did not show a significant increase in tumor size and she is asymptomatic.
+
+Summary:
+
+This 34-year-old mother of two presented with hypertension and gdma2 during her third pregnancy. The multidisciplinary team decided to proceed with an interval adrenalectomy after ultrasonic imaging showed a hyperechoic, hypervascular well-defined right suprarenal mass suggestive of pheochromocytoma. Her pheochromocytoma was removed by laparoscopic right adrenalectomy, and her cerebellar hemangioblastomas are managed conservatively. The patient is currently asymptomatic and under neurosurgical follow-up.",Cancer Only,1.0,Diabetes Only,0.0,1.0,0.95,Diabetes Only,"The retrieval context was not provided, so the decision heavily relies on the initial classification and direct text analysis. The AI's classification of ""Diabetes Only"" with high confidence (0.9) is supported by the discharge summary, which explicitly diagnoses the patient with gestational diabetes mellitus (gdma2) and notes active management with insulin. There is no evidence of cancer; the cerebellar hemangioblastomas and retinal hemangioblastoma are not classified as malignancies, and the adrenal pheochromocytoma is a tumor but not a malignancy. Therefore, the final classification is ""Diabetes Only"" with high confidence."
+685,"Discharge Summary:
+
+Patient Name: [REDACTED]
+Hospital Identification Number: [REDACTED]
+
+Admission Date: [REDACTED]
+Discharge Date: [REDACTED]
+
+Medical History:
+The patient was a 19-year-old male with no significant medical history.
+
+Hospital Course:
+The patient presented with complaints of palpitations, chest pain, and shortness of breath, which started during his work on a Christmas tree farm. The patient reported a history of similar episodes for the last six years, usually triggered with mild exertion. He noticed increased frequency and severity of symptoms for the last six months, occurring at least twice per week. The patient also reported feeling more fatigued and tired for the last few months. On admission, vitals were normal, and the patient was anxious and appeared to be in distress. A chest X-ray showed a right perihilar mass of 3.1 x 3.4 cm, and a computed tomography scan of the chest revealed stippled-type calcified mediastinal lymphadenopathy of 1.6 cm x 2.1 cm and a right hilar mass of 3.8 x 4.8 cm.
+
+Diagnostic Results:
+The patient had a bronchoscopy with fine needle aspiration (FNA) of mediastinal mass and lymph nodes, which came back negative for malignancy. However, histological examination showed predominant necrosis with rare benign lymphoid tissue. Urine histoplasma antigen and serum Aspergillus galactomannan antigens were negative. The patient had a mediastinoscopy with lymph node biopsy, which showed an inflammatory granulomatous process. Pathology report showed lymphoid tissue with necrotizing granulomatous inflammation, and positive fungal stain and morphology consistent with Histoplasma species. Fungal and acid-fast bacilli (AFB) cultures remained negative.
+
+Discharge Condition:
+The patient experienced chest discomfort and dyspnea after the bronchoscopy but improved after regular infectious disease clinic follow-up. The patient was started on oral itraconazole, which had to be discontinued due to diffuse rash after two weeks of treatment. The patient was then switched to oral fluconazole, which he tolerated without any problems.
+
+Discharge Diagnoses:
+The patient was diagnosed with inflammatory granulomatous process, with positive fungal stain and morphology consistent with Histoplasma species.
+
+Discharge Medications:
+The patient was prescribed oral fluconazole 400 mg once daily at the time of discharge.
+
+Instructions:
+The patient was advised to follow up with their primary care physician and infectious disease specialist for further monitoring and management of the inflammatory granulomatous process. The patient was also advised to seek medical attention if they develop any new symptoms or if their symptoms worsen.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, with a reasoning that aligns with the diagnostic criteria. The patient text confirms the absence of cancer, as the biopsy results were negative for malignancy and indicated an inflammatory granulomatous process due to Histoplasma species. There is no mention of diabetes, related symptoms, lab values, or treatments in the discharge summary. Therefore, the evidence from the initial classification and the patient text strongly supports the final classification of ""Neither"" for both conditions."
+1736,"Discharge Summary
+
+Patient Name: [REDACTED] 
+Medical Record Number: [REDACTED] 
+Discharge Date: [REDACTED] 
+
+Reason for Hospitalization:
+The patient was admitted with complaints of epigastric pain and 10-pound unintentional weight loss over three months, along with associated occasional non-bloody, non-bilious vomiting and early satiety.
+
+Hospital Course:
+The patient was diagnosed with chronic kidney disease stage IV, anemia of chronic disease, chronic obstructive pulmonary disease, two ischemic strokes, and esophageal carcinoma treated 14 years prior with chemotherapy and radiotherapy. The patient was started on proton pump inhibitor therapy for mild antral gastritis. Further examinations showed peripheral blood eosinophilia suggestive of acute interstitial nephritis. The patient was started on intravenous fluids with bicarbonate and underwent diagnostic CT scan of chest, abdomen, and pelvis to rule out any malignancy. The CT confirmed known emphysematous changes in lungs and diverticulosis coli. Later, the patient developed a large rectus sheath hematoma that necessitated a blood transfusion, discontinuation of heparin products, and placement of right internal jugular vein Perm-A-cath for hemodialysis. The patient's hemoglobin at discharge was 10.3 g/dl, and she remained stable on follow-up two months later. The patient's renal function did not improve despite corticosteroid therapy, and she was transitioned to peritoneal dialysis six months later.
+
+Discharge Medications:
+The patient was discharged on the following medications: [REDACTED]
+
+Follow-up:
+The patient was advised to schedule follow-up appointments with the nephrology and pulmonary departments.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial classification confidently indicated neither cancer nor diabetes, citing the past treatment of esophageal carcinoma with no current evidence of malignancy and no mention of diabetes. The discharge summary supports this, as it details a history of esophageal carcinoma treated 14 years ago with no current cancer diagnosis and no evidence of diabetes or related treatments. Therefore, the final classification is neither cancer nor diabetes, with high confidence."
+3040,"Discharge Summary:
+
+1. Patient Details:
+- Name: Anonymous
+- Age: 40 years
+- Gender: Female
+- Occupation: Bank Clerk
+
+2. Reason for Admission:
+- Oral cavity and nose mucosal bleeding
+- Muscle hematoma on both legs
+- Homolateral painful knees
+
+3. Hospital Course:
+- Coagulation test showed a severely prolonged activated partial thromboplastin time (aPTT) with normal prothrombin time (PT) and thrombin time (TT).
+- Laboratory investigations revealed severe anemia and thrombocytopenia.
+- Plasma bilirubin levels were normal and reticulocyte percentage was 1.4%.
+- Additional tests revealed that FVIII:C was 1%, FIX:C was 130%, and FVIII inhibitor (FVIII:I) was 210 BU/ml.
+- The direct antiglobulin (Coombs) test was negative, platelet associated antibody IgG is positive, and Lupus anticoagulants (LAC) were negative. 
+- Complement levels were reduced.
+- Autoimmune screen for CTD was normal. Virology tests for HIV, HPVB19, EBV, CMV, and hepatitis virus were all negative. A pectoral-abdominal computed tomography (CT) scan did not detect infection or tumor.
+- The patient was diagnosed with acquired hemophilia A (AHA) along with immune thrombocytopenia and blood-loss anemia.
+- Treatment included transfusion with packed red-blood cells, fresh frozen plasma (FFP), and human prothrombin complex concentrate (hPCC) to complement clotting factors.
+- Intravenous immunoglobulin (IVIG) was administered at a total dose of 2 g/kg over 5 days and started with oral prednisone at a dose of 1 mg/kg/day.
+- Intravenous cyclophosphamide and continued oral prednisone treatment were initiated when the aPTT did not shorten.
+- Intravenous anti-CD20 monoclonal antibody (Rituximab) treatment at 375 mg/m2 each week with tapering of the prednisone dose to 0.8 mg/kg/day was initiated.
+- Shoulder joint bleeding gradually ceased after 4 weeks of anti-CD20 monoclonal antibody therapy.
+- APTT and plasma FVIII were normalized and the FVIII:I titer became undetectable after 4 weeks of anti-CD20 monoclonal antibody therapy.
+- Prednisolone was gradually reduced at 10 mg each week until it was discontinued.
+- There was no relapse during the 3-year follow-up period.
+
+4. Disposition:
+- Stable condition upon discharge.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context and initial AI classification both indicate neither cancer nor diabetes, with the AI classification having a high confidence of 1.0. The discharge summary explicitly diagnoses the patient with acquired hemophilia A and immune thrombocytopenia, with no mention of cancer or diabetes. The CT scan confirms the absence of a tumor, and there are no laboratory values or treatments indicative of diabetes. Therefore, the evidence strongly supports the classification of neither cancer nor diabetes."
+3162,"Discharge Summary:
+
+Patient Name: [Redacted]
+Date of Admission: [Redacted]
+Date of Discharge: [Redacted]
+
+Admitting Diagnosis: Solitary pulmonary nodule
+
+Hospital Course:
+
+The patient was admitted with a history of cough for the past week. Her medical history revealed t2d, which was inadequately controlled for ten years. Neutrophils, C-reactive protein, procalcitonin, and tumor markers such as carcinoembryonic antigen, neuron-specific enolase, squamous cell carcinoma antigen were within normal range. The T-SPOT.TB assay examination was negative. CT scan of the chest revealed a heterogeneous lobulated solitary pulmonary nodule without any cavity lesions or calcification in the peripheral right lower lobe. No enlarged hilar or mediastinal lymph nodes were observed. Preoperative brain MRI scans showed negative findings. 
+
+The patient underwent lobectomy of the right lower lobe and systemic mediastinal lymph node dissection. Gross examination revealed a well-demarcated white-pan solid mass. Microscopically, the tumor was composed of spindle cells with a whorl pattern. Immunohistochemically, the tumor cells were positive for vimentin, EMA, PR (progesterone recepters), CD34, D2–40, S100 (focal), and 2% tumor cells positive for Ki-67. The tumor cells were negative for synaptophysin, SMA (smooth muscle actin), TTF-1 (thyroid transcription factor-1), Chromogranin A, desmin, GFAP, WT-1 (Wilm’s tumor gene-1), HBME-1 (Hector Battifora mesothelial epitope-1). 
+
+The patient was diagnosed with primary pulmonary meningioma (PPM). The patient received an appropriate post-operative care regimen, and there were no complications during her hospital stay. The patient was discharged in stable condition with instructions to follow up with her primary care physician and surgical team. 
+
+Discharge Medications: [Redacted]
+
+Follow-up Appointments: The patient was advised to follow up with her primary care physician and surgical team.
+
+Instructions: The patient was advised to rest, avoid strenuous activity, and to follow her post-operative instructions to ensure a smooth recovery. Any concerning symptoms or issues should be discussed with her primary care physician. 
+
+Completed By: [Redacted]
+Title: [Redacted]",Cancer Only,1.0,Diabetes Only,0.0,1.0,0.95,Diabetes Only,"The retrieval context was not provided, so the decision heavily relies on the initial classification and direct text analysis. The initial classification confidently identified diabetes as the only condition, citing a history of inadequately controlled Type 2 Diabetes. The discharge summary corroborates this with explicit mention of Type 2 Diabetes and no evidence of malignancy. The primary pulmonary meningioma (PPM) is identified as a benign condition, not meeting the criteria for cancer. Therefore, the final classification is diabetes only, with high confidence."
+1522,"Discharge Summary:
+
+Patient: 33-year-old male with a history of Crohn’s disease
+
+Hospital course:
+The patient was admitted to our hospital due to the progression of stoma stenosis caused by abdominal wall abscess formation around his ascending colonic stoma. Methicillin-resistant Staphylococcus aureus (MRSA) was detected in the patient's fecal culture examination. Consistent with the diagnosis of Crohn’s disease, the patient underwent colectomy and colostomy surgeries and was treated conservatively for progressive inflammation before surgery. Afterward, the patient underwent colostomy closure, ileocecal resection, abdominal wall abscess and fistula debridement, and ileostomy construction through a midline incision. The patient was classified as ASA physical class 2 and wound was stratified as class IV. The long operation time and dirty, infected condition created a high risk for surgical site infection (SSI). However, the surgical site was successfully closed with no signs of infection on POD 14.
+
+Treatment:
+Negative pressure wound therapy (NPWT) was applied after surgery using the V.A.C. system (KCI USA, Inc., San Antonio, TX, USA). The dressing was changed every 2 days, and the skin defect wound was closed using sutures from both edges in a stepwise manner. For the postoperative period, the patient was administered prophylactic antibiotics, 1 g of cefmetazole intravenously once every 12 h for 7 days. The wound was continuously monitored, and the patient was discharged from the hospital on POD16.
+
+Outcome:
+The patient's condition improved daily, and the wound site was closed without any signs of infection on POD 14. The pathological examination of the surgical specimen revealed colonic stenosis and chronic inflammation, but no malignant changes were observed. The patient's laboratory findings were within the normal ranges, except for anemia and malnutrition, respectively. In conclusion, the patient demonstrated a successful response to NPWT application in the treatment of the wound site, and the healing process was well-managed by the clinical staff.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, citing the absence of malignant changes in the pathological examination and no evidence of diabetes-related criteria. The patient discharge summary corroborates this, explicitly stating no malignant changes and no mention of diabetes or related treatments. The patient's laboratory findings were normal except for anemia and malnutrition, which are unrelated to diabetes. Therefore, the evidence strongly supports the conclusion that the patient does not have cancer or diabetes."
+520,"Hospital Course:
+
+Admission Date: [DATE] 
+Discharge Date: [DATE]
+
+Medical History:
+- Asthma
+- Allergic rhinitis
+
+Chief Complaint:
+- Fever of unknown origin for three weeks
+- Drenching night sweats
+- Weight loss
+- Fatigue
+- Nausea
+- Diarrhea
+
+Physical Examination:
+- Hemodynamically stable 
+- Febrile at 102°F
+- Extensive left-sided, posterior, cervical lymphadenopathy
+
+Diagnostic Studies:
+- Mild anemia
+- Negative hepatitis panel, anti-nuclear antibody (ANA), human immunodeficiency virus (HIV1/HIV2), Lyme antibody, and infectious mononucleosis (IM) serology, non-reactive rapid plasma reagin (RPR), and negative Babesiosis smear.
+- Computed tomography (CT scan) of the chest and abdomen were unremarkable. 
+- Ultrasound (U/S) and CT imaging of the neck demonstrated extensive adenopathy throughout the left posterior cervical carotid chain.
+- U/S guided lymph node biopsy showed polymorphous appearance with areas of zonal necrosis and a subpopulation of medium-large atypical lymphoid cells suggesting an atypical lymphoproliferative disorder. 
+- Excision biopsy ruled out malignancy and Hodgkin disease. 
+- Pathology showed histiocytic necrotizing lymphadenitis.
+
+Treatment:
+- Managed with ibuprofen
+- Recovered fully in five months’ time.
+
+Follow-up:
+- Follow-up with primary care physician as needed.
+
+Disclaimer:
+- This document is not a substitute for medical advice.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, citing a biopsy that ruled out malignancy and no evidence of diabetes. The patient discharge summary supports this, as the excision biopsy confirmed no malignancy, and there were no indications of diabetes such as elevated glucose levels or diabetes-specific treatments. The patient's symptoms and treatment plan do not suggest either condition, and the follow-up plan does not include management for cancer or diabetes. Therefore, the evidence strongly supports the classification of neither cancer nor diabetes."
+3132,"Discharge Summary:
+
+Patient Information:
+- Name: [redacted]
+- Age: 37
+- Gender: Male
+- Clinical history: ""No history of diabetes, hypertension, or cardiovascular disease""
+
+Summary:
+Mr. [redacted], a 37-year-old male with no prior medical history, presented to secondary-care hospital with wide complex tachycardia of two hours duration. Chest discomfort and thumping sensation were noted, and he was treated for VT in the emergency room. A single 1mg/kg dose of lidocaine terminated the tachycardia. He was referred to our center for further evaluation, where he underwent testing including normal ECG and normal serial cardiac enzymes. His coronary angiogram revealed normal coronary arteries.
+
+An electrophysiologic study (EPS) was conducted to rule out an accessory pathway (AP). During the study, tachycardia was induced with atrial and ventricular extrastimulation, and it was determined that the earliest local ventricular activation occurred at the distal coronary sinus (CS). This suggested either VT with 1:1 retrograde atrial activation or an aAVRT involving a left free-wall AP. The tachycardia was entrained from the high right atrium (HRA), giving an atrium-ventricle-atrium (AVA) response, to differentiate the aAVRT from VT. A transseptal puncture was carried out to attain left ventricle (LV) electrogram, and RF was delivered at the spot. Tachycardia terminated in the AP within 7 s of RF application, which was continued for 62 s. Thereafter, no tachycardia was inducible. A post-ablation atrioventricular node (AVN) Wenckebach block occurred, with no induction of tachycardia or preexcitation.
+
+Mr. [redacted] was then discharged without any complications, and he was advised to follow-up with his primary care physician.",Diabetes Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial classification confidently stated neither condition was present, with a confidence of 1.0. The reasoning was sound, as the discharge summary explicitly mentioned ""no history of diabetes"" and did not include any indications of cancer, such as a diagnosis, treatment, or symptoms. The patient's medical evaluation focused solely on cardiac issues, with no evidence of cancer or diabetes. Therefore, based on the available information, the final classification is that the patient has neither cancer nor diabetes."
+2019,"Discharge Summary:
+
+Patient Name: [REDACTED]
+Date of Admission: [REDACTED]
+Date of Discharge: [REDACTED]
+Admitting Diagnosis: Painful lump, right knee
+Discharge Diagnosis: Benign smooth muscle tumor of the knee
+
+Hospital Course:
+The patient, a 38-year-old woman, presented with a painful, mobile swelling to the lateral aspect of her right knee. Physical examination revealed a well-circumscribed, capsulated soft tissue mass adjacent to the lateral patellar retinaculum. MRI examination confirmed the diagnosis of a subcutaneous, ovoid, well-circumscribed, homogenous, capsulated soft tissue mass. Complete excision of the tumor was performed and histological examination showed a solid tumor composed of mature smooth muscle cells surrounding vascular structures. The smooth muscle cells showed no cellular atypia, and mitotic figures were rare. The patient's symptoms disappeared after the operation, and she was discharged from the hospital without any complications.
+
+Hospital Course Summary:
+A 38-year-old woman was admitted to the hospital with painful, mobile swelling in the right knee. The patient was diagnosed with a benign smooth muscle tumor of the knee. Complete excision of the tumor was performed, resulting in the disappearance of the patient’s symptoms. The patient was discharged without any complications.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial classification confidently identified the condition as neither cancer nor diabetes, with a confidence of 1.0. The reasoning was sound, as the discharge summary explicitly described a benign smooth muscle tumor, which does not meet the criteria for cancer. There was no mention of diabetes or related treatments or lab values. The patient text confirmed the absence of malignancy and diabetes, supporting the initial classification. Therefore, the final decision is that the patient has neither cancer nor diabetes, with high confidence."
+2336,"DISCHARGE SUMMARY
+
+Patient Name: [REDACTED]
+Admission Date: [REDACTED]
+Discharge Date: [REDACTED]
+
+CLINICAL COURSE:
+The patient, a 48-year-old male, was admitted to the psychiatric emergency room with dysmorphic mood. Subsequently, he was referred to medical service to manage hyponatremia. The patient had a past medical history of lumbar spondylosis managed with intermittent nonsteroidal anti-inflammatory drug use. He occasionally consumed alcohol but denied having any history of diabetes, prediabetes, obesity, binge drinking, abdominal trauma, any offending drugs, and any procedures including endoscopic retrograde cholangiopancreatography. The family history was unremarkable.
+During admission, the patient experienced abdominal discomfort that worsened alongside a fever. The patient developed tachycardia and hypotension, and the physical examination was notable for mild tenderness in the epigastrium. Laboratory investigations showed increased levels of hematocrit, leukocytes with neutrophil predominance, platelets, creatinine, C-reactive protein, amylase, and lipase. An alarming laboratory finding was a severe elevation of TGs with mild AP. The diagnosis of HTG-induced AP was established.
+The patient received aggressive intravenous rehydration therapy, antiemetics, opioids for pain control, and insulin to decrease TG levels. The patient's condition improved significantly, and apheresis was not performed due to the response to insulin therapy alone. The patient was discharged after his condition had improved, and he began tolerating oral feeds. Fenofibrate was initiated, and empiric antibiotic therapy was stopped due to negative blood cultures.
+
+DISCHARGE DIAGNOSIS:
+HTG-induced AP.
+
+DISCHARGE INSTRUCTIONS:
+The patient is advised to continue fenofibrate therapy indefinitely to prevent further attacks of AP. The patient is asked to follow a healthy diet and avoid alcohol intake. If the patient experiences any recurring symptoms, he should seek medical attention immediately.
+
+FOLLOW-UP:
+The patient is recommended to follow up with the primary care provider for further monitoring of the TG levels. The TG levels were recorded at 230 mg/dL after three months from the time of discharge.",Diabetes Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial AI classification confidently identified neither cancer nor diabetes, citing the use of insulin specifically for managing hypertriglyceridemia-induced acute pancreatitis (HTG-induced AP) rather than diabetes. The patient explicitly denied any history of diabetes, and there were no lab values or symptoms indicating diabetes. The discharge summary confirmed the diagnosis of HTG-induced AP and did not mention any cancer diagnosis or treatment. Therefore, the evidence strongly supports the conclusion that the patient does not have cancer or diabetes."
+3005,"Discharge Summary:
+
+Patient Name: [patient's name]
+DOB: [patient's date of birth]
+Gender: Female
+Admission Date: [admission date]
+Discharge Date: [discharge date]
+Admitting Diagnosis: Perineal swelling
+
+Hospital Course:
+The patient presented with complaints of perineal swelling, which was noticed 6 months ago in the right perineal region. The MRI of the perineum was carried out, which revealed a well-encapsulated lesion measuring 36 × 26 × 24 mm, suggestive of an epidermoid cyst. Surgical excision of the swelling was performed, and subsequent histopathology confirmed it to be an epidermoid cyst without any evidence of malignancy.
+
+Clinical Course:
+The patient's perineal swelling was successfully treated with surgical excision, and there were no complications during the hospitalization. Postoperative care was satisfactory, and the patient was discharged in stable condition. The patient was advised to follow up with her primary care physician for routine care.
+
+Medications:
+None
+
+Advised follow-up:
+The patient was advised to follow up with her primary care physician for routine care.
+
+Diagnostic Results:
+MRI of the perineum revealed a well-encapsulated lesion measuring 36 × 26 × 24 mm in the soft tissues of the perineum on the right side, indicative of an epidermoid cyst without any malignancy.
+
+Condition at Discharge:
+The patient's condition at discharge was stable with complete resolution of perineal swelling.
+
+Procedures:
+Surgical excision of the perineal swelling was performed successfully.
+
+Consultations:
+None
+
+Summary:
+The patient presented with perineal swelling and was diagnosed with an epidermoid cyst through MRI and subsequent histopathology. Surgical excision was performed successfully without any complications. The patient was discharged in stable condition and advised to follow up with her primary care physician for routine care.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently determined that the patient has neither cancer nor diabetes, with a confidence level of 1.0. The reasoning was sound, as the discharge summary explicitly confirmed the lesion to be an epidermoid cyst without malignancy, and there was no mention of diabetes or related criteria. Direct examination of the patient text corroborates this, as there are no indications of cancer or diabetes diagnoses, treatments, or lab values meeting diagnostic thresholds. Therefore, the final classification is that the patient has neither condition, with high confidence."
+3002,"Hospital Course:
+
+The 80-year-old male patient was admitted to the hospital due to pulmonary adenocarcinoma with metastases and comorbidities including COPD, heart disease, and diabetes. Stereotaxic radiotherapy was administered, and the patient underwent several cycles of chemotherapy with vinorelbine while receiving corticosteroids for COPD-related dyspnoea. Following a CT scan of the chest, the patient was found to have a large amount of gas in adipose tissue along the caecum, ascending and transverse colon with no signs of bowel wall distress or perforation. The surgical consultant recommended close observation. One week later, an abdominal plain film documented the persistence of PI along the right and transverse colon but the patient reported no abdominal pain or fever. The oncologist decided to reduce steroid doses and gradually proceed with vinorelbine. Follow-up CT scans showed minimum extent PI limited to the caecum. 
+
+Discharge summary:
+
+The patient was discharged from the hospital with improved dyspnoea. The discharge summary recommends close follow-up with regular check-ups. The patient is advised to inform the healthcare provider immediately if any changes in bowel movements or abdominal pain occur. All previous treatments and required medical documents will be made available to the patient for continuity of care.",Cancer Only,1.0,Both,1.0,1.0,1.0,Both,"The retrieval context was not provided, but the initial classification by the AI was highly confident and well-reasoned, citing explicit evidence from the discharge summary. The patient text clearly states ""pulmonary adenocarcinoma with metastases,"" confirming an active cancer diagnosis, and mentions ""comorbidities including...diabetes,"" indicating a current diagnosis of diabetes. The treatments, including chemotherapy with vinorelbine, further support the presence of cancer. Given the explicit diagnoses and ongoing treatments, the evidence strongly supports the classification of both cancer and diabetes as current conditions."
+628,"Hospital Course:
+Patient 1, a 74-year-old male, underwent HoLEP for bladder outlet obstruction and bladder stones. During the procedure, there was an area of capsular perforation at the 5 o'clock position in the mid gland, and significant abdominal distention was noted upon removal of the operative drapes. General surgery was consulted, and a subumbilical minilaparotomy was performed to address the abdominal distention, revealing retroperitoneal extravasation without intraperitoneal bladder injury or perforation. A 10F Jackson-Pratt drain was placed in the pelvis, and the patient was transferred to the ICU for hemodynamic monitoring and observation.
+
+On POD 1, the patient was progressing well and transferred to the floor in stable condition. The Jackson-Pratt drain output decreased significantly from 710 cc on POD 0 to 81 cc on POD 1 and was subsequently removed on POD 2 after draining 20 cc. Cardiology was consulted in the ICU because of prolonged PR interval and bradycardia, which ultimately warranted no further work-up.
+
+Outcome:
+The patient had no significant complications during the hospital stay, was discharged on POD 3, and had his catheter removed on POD 10. Pathologic analysis of the specimen revealed no evidence of malignancy, and the patient's recovery was uneventful.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, citing the absence of malignancy in the pathologic analysis and no mention of diabetes-related criteria. The patient discharge summary corroborates this, explicitly stating no evidence of malignancy and lacking any indication of diabetes through symptoms, lab values, or treatments. Given the strong agreement between the initial classification and the direct text analysis, the final classification is made with high confidence."
+78,"Discharge Summary:
+
+Patient name: [Redacted]
+Age: 61
+Gender: Male
+
+Hospital: [Redacted]
+Service: Otolaryngology
+
+Chief Complaint:
+Progressive asymmetric hearing loss and limited communication ability.
+
+Hospital Course:
+
+The patient was referred for hearing rehabilitation with cochlear implant on the left side due to progressive asymmetric hearing loss and limited communication ability. Word recognition score on the left side was 20% with hearing aid and 50% on the right side with FM system testing at 65 dB SPL.
+
+A contrast-enhanced cranial magnetic resonance imaging (cMRI) revealed an intra- and extracanalicular vestibular schwannoma (VS) or acoustic neuroma. Possible treatment options included tumor removal via a retrosigmoid approach or stereotactic radiotherapy as first-line therapy. The patient underwent tumor removal via a retrosigmoid approach. Vestibulocochlear and facial nerves were preserved as their functionality was monitored with electrophysiologic monitoring (neuromonitoring). There was a small residual intracanalicular VS six months postoperatively. Subsequently, the patient underwent stereotactic radiotherapy before cochlear implantation with 13 Gy (70% Isodose; Dmax 18.6 Gy) delivered in a single session.
+
+Six weeks later, the cochlear implant was placed more posterior than usual to minimize artifacts in postoperative MRI scans. Six months after cochlear implantation, the first postoperative MRI was performed using a 1.5 Tesla MR with medium bandwidth. One month after implantation, aided word recognition score (WRS) with cochlear implant on the left side (and masking of the right side) was 45% with FM testing at 65 dB SPL and six months later, 60%. Binaural hearing with cochlear implant on the left side and hearing aid on the right side resulted in an aided WRS of 90% with FM testing after two years.
+
+Hearing in noise was measured with the aided Oldenburg Sentence test (OLSA). One year postoperatively, the test revealed scores of −1.1 dB signal-to-noise ratio (SNR) for the left side with cochlear implant (with masking of the right ear) and −3 dB with cochlear implant and hearing aid on the right side, indicating an improvement of hearing in noise with cochlear implant.
+
+Impression:
+
+The patient underwent vestibular schwannoma resection via a retrosigmoid approach with preserved vestibulocochlear and facial nerves. He subsequently underwent a stereotactic radiotherapy before cochlear implantation with good hearing outcomes. The patient demonstrated significant improvement in word recognition score, binaural hearing, and hearing in noise after cochlear implantation. 
+
+Plan:
+
+Continue follow-up with audiology to monitor hearing outcomes. Consider MRI surveillance to evaluate recurrent/suspicious growth of vestibular schwannoma. Provide annual hearing and vestibular function assessments.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial classification confidently identified the condition as neither cancer nor diabetes, with a confidence of 1.0. The reasoning was sound, as the discharge summary described a vestibular schwannoma, which is a benign tumor and not classified as cancer. There was no mention of diabetes or related diagnostic criteria, treatments, or complications in the patient text. Therefore, based on the evidence from the initial classification and the direct analysis of the patient text, the final classification is neither cancer nor diabetes."
+253,"Hospital Course:
+The patient is a 34-year-old pregnant female with a gdm and three previous miscarriages due to hypertensive peaks. She was admitted to the endocrinology department at 20 weeks of amenorrhea due to a hypertensive crisis, headaches, palpitations, and hot flashes. Diagnosis of a secretory neuroendocrine tumor was suspected, and a biological assessment including urinary and plasma catecholamines came back positive. An abdominal-pelvic MRI showed an abdominal latero-aortic mass measuring 36 * 33 mm, corresponding to paraganglioma.
+
+The patient was scheduled for surgery for laparoscopic removal of her paraganglioma. The anesthetic management was carefully planned to prevent perioperative morbidity related to hemodynamic instability. After installation in left lateral decubitus proclive 30°, the patient underwent anesthesia induction, intubation, and maintenance of anesthesia with close monitoring of vital signs. During tumor manipulation, episodes of arterial hypertension and hypotension were observed and managed with analgesia, administration of vasoactive drugs and close glycemic monitoring.
+
+The tumor removal was followed by episodes of arterial hypotension, which were managed by lightening anesthesia and volemic expansion with drug administration. For paraganglioma extraction, the procedure lasted 2 hours, with an intraoperative diuresis of 500 ml and estimated bleeding of 80 cc. After the procedure, the patient was transferred to the intensive care unit for clinical and biological monitoring and was weaned from all drugs two days later. 
+
+The patient was discharged to the visceral surgery department for further management with antihypertensive treatment resumed. Obstetrical evaluation with a foeto-placental ultrasound was performed, which returned normal with the presence of fetal heart activity. The patient will continue to be monitored.",Cancer Only,1.0,Diabetes Only,0.0,1.0,0.9,Diabetes Only,"The retrieval context was not provided, so the decision heavily relies on the initial classification and direct text analysis. The initial classification identified gestational diabetes mellitus (GDM) as a current diagnosis, which is supported by the discharge summary explicitly mentioning ""gdm."" There is no evidence of cancer, as the paraganglioma was surgically removed and not confirmed as malignant. The AI's reasoning is sound, and the confidence level is high at 0.9, indicating a strong likelihood of diabetes without cancer. Therefore, the final classification is ""Diabetes Only"" with a confidence of 0.9."
+345,"Discharge Summary:
+
+Patient Name: <Name>
+Hospital Admission Dates: <Admission Date> - <Discharge Date>
+
+Brief Hospital Course:
+The patient was admitted to the hospital due to progressive vision loss and neurological symptoms. Medical history included follicular lymphoma, which was treated with chemotherapy in the past. Brain CT initially showed a cortical and subcortical lesion, which was confirmed by MRI. Brain biopsy suggested an inflammatory demyelinating process, but subsequent imaging and laboratory tests suggested progressive multifocal leukoencephalopathy. The patient's neurological symptoms continued to worsen despite treatment, and the patient was transferred to a hospice for palliative care.
+
+Hospital Course Summary:
+
+History of Present Illness:
+The patient presented to the hospital with progressive vision loss and neurological symptoms.
+
+Medical History:
+The patient was diagnosed with follicular lymphoma in 2010 and had been treated with chemotherapy. Medical history also included urinary tract infections, gingivitis, and herpes zoster cutaneous reactivation.
+
+Hospital Course:
+Upon admission, brain CT showed a cortical and subcortical lesion, which was confirmed by MRI. Brain biopsy suggested an inflammatory demyelinating process, but subsequent imaging and laboratory tests suggested progressive multifocal leukoencephalopathy. The patient's neurological symptoms continued to worsen despite treatment, and the patient was transferred to a hospice for palliative care.
+
+Medications:
+The patient was taking atorvastatin, amlodipine, and pantoprazole at the time of admission.
+
+Allergies:
+None recorded.
+
+Discharge Diagnosis:
+Progressive multifocal leukoencephalopathy
+
+Procedures:
+Brain biopsy
+
+Consultations:
+Multidisciplinary assessment
+
+Follow-up:
+The patient was transferred to hospice care.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial classification confidently identified neither cancer nor diabetes, citing the past treatment of follicular lymphoma and the absence of current malignancy or diabetes-related criteria. The discharge summary corroborates this, as it mentions a history of follicular lymphoma treated in the past and no current cancer treatment or diabetes indicators. The patient's current condition is progressive multifocal leukoencephalopathy, with no evidence of active cancer or diabetes, supporting the final classification of neither."
+3061,"Discharge Summary 
+
+Patient name: N/A
+Gender: Female
+Age: 7 years old
+Weight: 32 kg
+Breed: Briard
+Admission date: N/A
+Discharge date: N/A
+
+Diagnosis: Inspiratory dyspnea, audible inspiratory wheezing, and reduced tracheal diameter due to a soft tissue opaque crescent shaped mass identified in the tracheal lumen at the level of the 5th and 6th cervical vertebrae. Serum biochemistry revealed raised alkaline phosphatase activity.
+
+Hospital Course: 
+The patient underwent several tests to diagnose the cause of her symptoms, including radiography of the left lateral cervical projection and thorax, tracheoscopy, bronchoscopy, and FNA of the mass. The FNA results, revealed a scarce population of benign monomorphic mesenchymal cells. Surgical removal of the tumor was performed 9 days later under general anesthesia via ventral midline approach, with no complications. Postoperative observation was carried out for 24 hours. Respiratory signs were relieved immediately after surgical removal of the tumor, and postoperative recovery was uneventful. A control visit was carried out 6 weeks after the operation, which showed no scar tissue formation and no tracheal stenosis. The patient was reported to be asymptomatic during a follow-up call to the owner 9 months after the surgery.
+
+Summary:
+The patient, a 7-year-old, 32 kg, neutered female Briard dog, presented with inspiratory dyspnea with an audible inspiratory wheeze particularly during exercise and after eating that had been gradually worsening for a period of 3 months. Radiography revealed a soft tissue opaque crescent-shaped mass in the tracheal lumen, and serum biochemistry revealed raised alkaline phosphatase activity. Tracheoscopy, bronchoscopy, and FNA were used to obtain a diagnosis of a benign lipoma. Surgical removal of the lipoma was performed with no complications, and the patient was observed for 24 hours postoperatively. Follow-up visits showed no abnormal findings.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context and initial classification both indicate that the patient does not have cancer or diabetes. The initial classification is highly confident, with a score of 1.0, and the reasoning is sound, citing the benign nature of the lipoma confirmed by FNA results. The patient text explicitly states the mass was a benign lipoma, and there is no mention of diabetes or related diagnostic criteria. Therefore, based on the evidence from all sources, the final classification is that the patient has neither cancer nor diabetes."
+1543,"Hospital Course Summary:
+
+Admitted: [date]
+Discharged: [date]
+
+Patient Information:
+Name: [patient’s name]
+Gender: Male
+Age: 39
+
+Admission Diagnosis:
+Human immunodeficiency virus (HIV) infection with Strongyloides stercoralis infection.
+
+Hospital Course:
+A 39-year-old Ethiopian man with HIV infection was admitted to the hospital with symptoms of vomiting, abdominal pain, and diarrhea. On admission, he was found to be febrile and dehydrated; he also had tachycardia and hypotension. Initial laboratory tests were indicative of acute renal failure, hypoalbuminemia, elevated white blood cell count, and liver enzymes slightly abnormal. A chest X-ray revealed bilateral areas of increased parenchymal density. The CT scan further showed bilateral ground-glass opacities and areas of consolidation with pleural effusion and small bowel wall thickening without distension. The patient was temporarily transferred to the ICU, and empiric broad-spectrum antibiotic therapy was started. A nasogastric tube was placed due to severe stomach and abdominal distension, which showed high gastric output. Bronchoscopy with bronchoalveolar lavage (BAL) was performed, as were microscopy, cytology, and cultures. Microscopic examination of the BAL and stool showed parasitic organisms morphologically consistent with Strongyloides larvae. Serology for Strongyloides stercoralis by enzyme-linked immunoassay was positive. Administration of ivermectin was immediately started and gradually escalated to subcutaneous administration of the veterinary preparation of ivermectin, which was successful in terminating larvae detection in the body fluids. All cultures (blood, urine, stool, and BAL) were persistently negative for bacteria, mycobacteria, and fungi, and antibiotic therapy was discontinued. The systemic lymphoma was excluded with hematological evaluation, maxillofacial CT scan, and PET/CT scan. cART and rehabilitation program were started and continued until discharge. The patient was discharged after 22 days of hospitalization.
+
+Discharge Diagnosis:
+The patient presented with HIV infection and Strongyloides stercoralis infection, which was successfully treated during hospitalization.
+
+Discharge Condition:
+The patient is currently stable, asymptomatic and had no medical problems.
+
+Discharge Medications:
+N/A
+
+Follow-Up Appointment:
+The patient was advised to follow up in the outpatient clinic for further care.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, with a confidence of 1.0. The reasoning was sound, as the discharge summary explicitly mentioned the exclusion of systemic lymphoma and did not provide any evidence of diabetes, such as elevated glucose levels or diabetes-specific treatments. The patient was stable and asymptomatic at discharge, further supporting the absence of these conditions. Therefore, the final classification is ""Neither,"" with high confidence."
+813,"Discharge Summary:
+
+Admission Date: [date]
+Discharge Date: [date]
+
+Patient Name: [name]
+Medical Record Number: [number]
+
+Diagnosis: TSH-producing pituitary macroadenoma and central hyperthyroidism
+
+Hospital Course:
+
+The patient, a 55-year-old man, was admitted to the hospital after being transferred from a local hospital due to incidentally discovered AF. After receiving radiofrequency ablation for his AF, the patient was found to have hormonal imbalances indicating thyrotoxicosis, a positive result for TSH receptor antibody, and a thyroid gland that was diffusely enlarged with a nodule located in the left lobe. Fine needle aspiration biopsy suggested that the nodule was benign. Upon further examination, an MRI of the sella region revealed a pituitary tumor measuring 2.3 × 1.7 × 2.2 cm3 in the sella, involving the cavernous sinuses and extending into the suprasellar cistern. Based on these findings, the patient was diagnosed with TSH-producing pituitary macroadenoma and central hyperthyroidism.
+
+One week after diagnosis, the patient underwent transsphenoidal neurosurgery to remove the pituitary macroadenoma. The resected pituitary adenoma cells were found to be positive for TSH and PRL antibodies, with the percentage of positive Ki-67 being less than 2%, indicating that the tumor was benign. After surgery, the patient's TSH levels and thyroid hormone levels returned to within the normal ranges.
+
+One year after surgery, the patient's thyroid hormone levels increased beyond the normal ranges, although no residual tumor was found on MRI. Additionally, positive results were obtained for TRAb, and both TgAb and TPOAb were elevated beyond their normal ranges. The patient was prescribed thyrozol 10 mg/day, which was effective in keeping thyroid function tests within normal ranges during 3 years of follow-up.
+
+During the patient's hospital course, there were no significant complications. The patient was discharged with instructions to continue taking thyrozol 10 mg/day and to follow up with an endocrinologist for further evaluation and treatment.
+
+Disposition:
+
+The patient was discharged to home in stable condition with instructions to follow up with an endocrinologist. The patient was prescribed thyrozol 10 mg/day, and instructed to continue taking the medication as prescribed. The patient was advised to return to the hospital if there were any concerns or changes in symptoms.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, so the decision relies on the initial classification and direct text analysis. The initial AI classification confidently identified neither cancer nor diabetes, citing the benign nature of the pituitary macroadenoma and the absence of any diabetes-related indicators. The discharge summary confirms the diagnosis of a benign TSH-producing pituitary macroadenoma, with no mention of malignancy or diabetes. The patient's treatment and follow-up care focus on managing thyroid hormone levels, with no evidence of cancer or diabetes. Therefore, the final classification is neither cancer nor diabetes, with high confidence."
+2895,"Chief Complaint: None
+
+History of Present Illness:
+The patient is a 75-year-old woman who was referred to our hospital for examination after an abdominal ultrasound for cancer screening revealed a retroperitoneal hypoechoic mass measuring 26 × 22 × 18 mm in the perirenal space, at the level of the left renal upper pole.
+
+Past Medical History:
+The patient has a past medical history, but was not reported as having any significant medical conditions in the case report.
+
+Medication:
+The patient's current medication was not provided in the case report.
+
+Hospital Course:
+The patient was evaluated by our team of medical professionals. During the hospital course, the patient was monitored and assessed regularly. No specific treatment was prescribed.
+
+Consultations and Referrals:
+The patient was referred to our hospital for examination and no specific consultations or referrals were noted during the hospital course.
+
+Condition at Discharge:
+The patient was discharged without any medical prescriptions, medication changes, or any other treatment-related needs.
+
+Follow-Up:
+Follow-up appointments were not reported in the case report. 
+
+Overall, the patient was evaluated and discharged without any significant medical concerns.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial AI classification confidently indicated neither cancer nor diabetes, citing the lack of biopsy confirmation for the hypoechoic mass and absence of diabetes-related indicators. The discharge summary supports this, as it mentions no explicit diagnoses, treatments, or lab values indicative of cancer or diabetes. The patient was discharged without medical concerns, reinforcing the conclusion that there are no active diagnoses of cancer or diabetes."
+815,"Discharge Summary:
+
+Name: Patient X
+Age: 82
+Sex: Male
+Admission Date: November 24, 2014
+Discharge Date: N/A
+
+Hospitals Course:
+The patient was admitted to the hospital due to difficulty in urinating spontaneously and was later diagnosed with prostatic adenocarcinoma after undergoing a transurethral resection of the prostate (TURP) and postoperative pathological examination. The patient had multiple bone metastases as revealed by a SPECT/CT scan. Initial PSA and free PSA (FPSA) levels were elevated. Radiotherapy and chemotherapy were not effective treatment options for the patient. Therefore, Alloreactive CTL treatment was started on December 16, 2014.
+ 
+The patient received two cycles of ACTL treatment from December 16, 2014 to February 10, 2015. The PSA levels significantly decreased after 28 cycles of continuous ACTL immunotherapy. The patient exhibited undetectable PSA and FPSA levels on May 12, 2016. A SPECT/CT scan revealed fewer bone metastatic lesions in December 2016, and no metastatic lesions were detected in other organs, including the lung, liver, and brain, by a PET-CT scan.
+
+Although the patient was initially diagnosed with metastatic lesions at multiple sites of the body, he was still alive after receiving 2 years of immunotherapy. The withdrawal of the ACTL immunotherapy was accompanied by a gradual increase in PSA levels in the patient.
+
+The patient did not exhibit any apparent cardiovascular system-related symptom or graft-versus-host disease (GvHD) during the immunotherapy treatment, despite being diagnosed with high blood pressure and Type II diabetes at the beginning of the treatment.
+
+General condition on discharge:
+The patient was not discharged but continues to receive medical attention.",Cancer Only,1.0,Both,1.0,1.0,1.0,Both,"The retrieval context was not provided, so the decision heavily relies on the initial classification and direct text analysis. The initial classification confidently identified both cancer and diabetes, citing explicit evidence from the discharge summary. The patient was diagnosed with prostatic adenocarcinoma with bone metastases, confirmed by pathological examination and imaging, fulfilling the criteria for an active cancer diagnosis. Additionally, the discharge summary explicitly states a diagnosis of Type II diabetes, which is a chronic condition, indicating a current diagnosis. Both conditions are clearly documented in the patient text, supporting the classification of both cancer and diabetes with high confidence."
+1270,"Hospital Course:
+The patient, a male infant born small for gestational age at 33 weeks, was admitted to our center due to persistent hypoglycemia on DOL 5. The infant had a low birth weight and length and was born to a 35-year-old mother with gestational diabetes and pregnancy-induced hypertension. There was no family history of hypoglycemia reported, however, the maternal grandmother had a history of type 2 diabetes. The infant received initial treatment for hypoglycemia with dextrose 10% IVF and increased oral feeds. The infant also received hydrocortisone treatment secondary to low cortisol levels. After discontinuing hydrocortisone therapy, hypoglycemia recurred, and the pediatric endocrinology team was consulted. High-dose ACTH stimulation testing was performed due to random low cortisol level and the infant responded adequately.
+
+Diagnosis:
+The infant was diagnosed with Congenital Hyperinsulinism (CHI). DNA sequencing for CHI revealed a heterozygous pathogenic missense variant in exon 7 of HNF4A, (p.Arg267Cys; c.799C > T; legacy Arg245Cys), which affected a highly conserved amino acid and has been previously detected in patients with MODY 1.
+
+Treatment:
+The infant was started on diazoxide at 15 mg/kg/day with good response. Diazoxide was gradually tapered based on point-of-care (POC) home glucose values in the range of 70-100 mg/dL and eventually discontinued at 6 months of age. The fasting challenge test was not performed before total discontinuation of diazoxide. The infant remained euglycemic at the time of his last visit at 2 years 9 months of age.
+
+Follow-up:
+The infant was discharged in a stable condition and has been followed up regularly in the outpatient clinic, with no further episodes of hypoglycemia noted. Renal ultrasound, liver function tests, and urinalysis of this patient were normal.",Diabetes Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently indicated neither cancer nor diabetes, with a sound reasoning based on the discharge summary. The patient was diagnosed with Congenital Hyperinsulinism (CHI), not diabetes, and there was no evidence of cancer or related treatments. The discharge summary explicitly states the infant's euglycemic state and absence of malignancy, supporting the initial classification. Therefore, the final decision is that the patient has neither cancer nor diabetes, with high confidence."
+2095,"DISCHARGE SUMMARY:
+
+Patient Name: [Name]
+
+Gender: Male
+
+Date of Birth: [Date of Birth]
+
+Date of Admission: [Date of Admission]
+
+Date of Discharge: [Date of Discharge]
+
+Admitting Diagnosis: Multifocal Motor Neuropathy with Conduction Blocks
+
+Medical History: No previous long-term medical conditions (diabetes, hypertension, or cancer) or surgical procedures reported.
+
+Hospital Course:
+
+The patient, a 20-year-old Sri Lankan male, was admitted to our unit with a complaint of weakness in both hands for one month. He had previously been treated for dengue fever at a local hospital and had made a full recovery. However, five days after discharge, he began to experience weakness in his right hand, which subsequently progressed over time. He presented with an inability to write or button his shirt due to the weakness of his hands. The patient also reported mild weakness in both feet that did not significantly interfere with walking. He did not present with any accompanying numbness, parasthesia or pain.
+
+On general examination, the patient had an average build with no pallor, lymphadenopathy, or signs of malnutrition. The patient showcased some small muscle wasting of bilateral hands and feet. The patient had diminished power asymmetrically graded as 3 out of 5 in the right hand and 4 out of 5 in the left hand. Additionally, all fine finger movements were affected along with some degree of weakness in wrist extension. The patient showcased diminished power grade 4 in distal lower limbs (feet). Bilateral foot dorsiflexion was weak, while ankle jerks were elicited with reinforcement. Knee jerks were elicited without reinforcement and there was no objective sensory impairment of touch, pain, temperature, vibration, and joint position sensations in both upper and lower limbs. No cerebellar signs were demonstrated and his gait showed a minimal degree of high-stepping due to weak dorsiflexion. 
+
+Blood tests revealed white blood cell count: 8.5 × 109/L, platelet count: 274 × 109/L, hemoglobin 12 g/dl with normal red cell indices. The blood picture showed normochromic normocytic cells with some reactive lymphocytes suggestive of a recent viral infection. CSF analysis did not show any increase in proteins or cells and the values were within the normal limits. Anti-GM1 IgM antibody test was not carried out due to the high cost of the test and the patient’s unstable financial background. 
+
+Based on the findings, the patient was diagnosed with multifocal motor neuropathy with conduction blocks. The patient was referred to the neurologist and started on intravenous immunoglobulin (IVIg) therapy (2 g/kg/day) which was given for 5 days. He showed improvement in his neurological weakness with the treatment and outpatient physiotherapy was arranged. 
+
+Discharge Condition:
+
+The patient was discharged in a stable condition and was advised to follow up with his neurologist for further treatment.
+
+Patient Education:
+
+The patient was advised to abstain from alcohol and smoking, continue a healthy lifestyle, and comply with his treatment plan.
+
+Follow-up:
+
+The patient was advised to follow up with his Neurologist for the continuation of treatment.
+
+Disposition:
+
+The patient has been discharged in a stable condition.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently stated ""Neither"" with a confidence of 1.0, citing the absence of any history or current indications of diabetes or cancer. The discharge summary corroborates this, explicitly noting no history of diabetes or cancer and focusing on multifocal motor neuropathy as the primary condition. There are no lab values, treatments, or symptoms indicative of either diabetes or cancer. Therefore, the final classification is ""Neither"" with high confidence."
+2445,"HOSPITAL COURSE SUMMARY:
+Admission Date: [date]
+Discharge Date: [date]
+
+Patient: [Patient's name]
+DOB: [Patient's date of birth]
+Gender: Female
+Race: Asian American
+
+Brief Hospital Course:
+The patient was admitted to our hospital for the evaluation of elevated transaminases. Extensive laboratory workup revealed dyslipidemia, insulin resistance, and hepatomegaly with severe hepatic steatosis. The ultrasound-guided liver biopsy showed severe macrosteatosis with mild lobular and periportal inflammation associated with focal hepatocyte damage and stage II fibrosis. The patient was instructed to exercise routinely and follow a healthy diet.
+
+History of Present Illness:
+The patient is a 31-year-old Asian American female with a past medical history of chewing betel leaf with betel nuts and non-smoker, who immigrated to the USA from Burma four years previously. The patient reported no previous history of liver test abnormality or liver disease. She reported rare consumption of alcohol and was not using any hepatotoxic prescription or over-the-counter medications or supplements. Besides, she had no family history of liver disease, hepatocellular carcinoma, autoimmune disorders, or diabetes mellitus.
+
+Physical Examination:
+The physical examination was significant for obesity with weight 66 kg, height 146 cm, body mass index (BMI) 31, hepatomegaly, nonpalpable spleen, and lack of stigmata of chronic liver disease. Physical examination at follow-up visit revealed dark brownish-red pigment on the teeth, tongue, and oral mucosa.
+
+Diagnostic Studies:
+Extensive laboratory workup revealed normal complete blood count, renal function, serum electrolytes, iron studies, serum immunoglobulin levels, and ceruloplasmin. Also, hepatitis B and C serologic tests and autoimmune markers were negative. Fasting lipid profile revealed dyslipidemia. Fasting blood glucose was elevated with simultaneous fasting insulin level, thus has insulin resistance. Hemoglobin (Hgb) A1c level was high.
+
+Imaging Studies:
+Ultrasonographic evaluation of the abdomen revealed hepatomegaly, hyperechogenic liver indicative of severe hepatic steatosis, an ill-defined liver mass, and standard spleen size. Magnetic resonance examination defined the liver mass as hemangioma in addition to hepatomegaly and severe hepatic steatosis.
+
+Hospital Course:
+The patient was instructed to exercise routinely and follow a healthy diet. The patient was seen in follow-up for three months at which time her weight was unchanged. Upon questioning the patient about the finding of dark brownish-red pigment on the teeth, tongue, and oral mucosa, she admitted to chewing betel on an average of 10 times per day for the last eight years. The patient reported an associated weight gain of around 16 kg from her baseline weight maintained for many years. This significant weight gain could not be reversed despite daily physically demanding work and following a healthy diet recommended by her primary care physician. Further management includes discontinuing the habit of chewing betel leaf with betel nuts and regular follow-up for monitoring hepatic functions, insulin resistance, and dyslipidemia.
+
+Discharge Diagnosis:
+1. Hepatomegaly with severe hepatic steatosis.
+2. Focal hepatocyte damage.
+3. Stage II fibrosis.
+4. Insulin resistance.
+5. Dyslipidemia.
+6. Betel nut- chewing.
+
+Discharge Instructions:
+1. The patient should discontinue the habit of chewing betel leaf with betel nuts.
+2. Follow-up with a primary care physician and gastroenterologist for monitoring dyslipidemia, insulin resistance, and hepatic functions.
+3. Follow a healthy diet and exercise regularly.
+4. Report any new or worsening symptoms immediately.",Both,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so the decision heavily relies on the initial classification and direct text analysis. The initial AI classification confidently identified neither cancer nor diabetes, citing the benign nature of the liver mass and the absence of explicit diabetes diagnosis despite insulin resistance and elevated HbA1c. The discharge summary corroborates this, as it lacks any explicit mention of cancer or diabetes diagnoses, treatments, or complications. The liver biopsy confirmed a benign condition, and while there is insulin resistance, it does not meet the criteria for diabetes. Therefore, the final classification is neither condition with high confidence."
+910,"Discharge Summary:
+
+Patient: 70-year-old female
+Admitted: November 2017
+Hospital: Skåne University Hospital, Sweden
+
+History:
+The patient had a medical history of breast cancer and lymphoedema of her left arm. She had a fever, shivers, and a suspected skin infection upon admission.
+
+Physical Examination:
+The patient had a sharply demarcated, warm, swollen, and painful erythema measuring approximately 7x15 cm on her left upper arm. A grade II systolic murmur was heard with punctum maximum I2 dexter. No local portal of bacterial entry was found. She had no signs of septic emboli, oral examination showed no signs of infection, and examination of lymph nodes was normal.
+
+Diagnosis:
+The patient was diagnosed with erysipelas.
+
+Treatment:
+The patient was treated with intravenous penicillin followed by an oral penicillin for seven days. The treatment was prolonged for 10 days.
+
+Follow-Up:
+Repeat blood cultures were drawn 14 days after discontinuation of antibiotics and they were negative. The patient has been referred to the lymphoedema outpatient clinic as well as to the dentist office to prevent further infections.
+
+Outcome:
+On follow-up, the patient had no sequelae to her infection.
+
+Conclusion:
+The patient was successfully treated for erysipelas and is stable upon discharge. Further preventative measures have been taken to avoid recurrence of the infection.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so I relied on the initial classification and direct text analysis. The AI's classification of ""Neither"" with high confidence (0.9) is supported by the discharge summary, which does not mention any current active cancer or diabetes. The patient's history of breast cancer is noted, but there is no indication of active malignancy or ongoing cancer treatment. Additionally, there are no diagnostic criteria, treatments, or symptoms related to diabetes present in the summary. Therefore, the evidence strongly supports the conclusion that the patient does not currently have cancer or diabetes."
+1836,"Hospital Course:
+The patient, a 79-year-old male, was admitted to the hospital with symptoms of dysphagia and weight loss. The patient's past medical history was significant for a distal gastrectomy due to a submucosal tumor 40 years ago and osteoporosis. Upon admission, the patient had a BMI of 21.5 and was observed to be bent over due to the osteoporosis. An upper gastrointestinal examination indicated the presence of a large hiatal hernia involving the entire stomach that was causing compression on the heart. The patient underwent elective surgical repair of the hiatal hernia, which was initially planned for a laparoscopic approach but converted to an open surgery due to the difficulty in exposing the stomach from the hernial sac. The operation time was 238 minutes, with intraoperative blood loss of 380 mL, and no complications were noted.
+ 
+Hospital Course Summary:
+The patient was admitted to the hospital due to dysphagia and weight loss, and a large hiatal hernia involving the entire stomach was found. Elective surgical repair of the hiatal hernia was performed with no complications. The patient had no recurrence of the hernia or dysphagia during the 12-month follow-up.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial classification confidently indicated neither cancer nor diabetes, with a confidence of 1.0. The reasoning was sound, as the discharge summary did not mention any current diagnosis or treatment for cancer or diabetes. The past medical history of a distal gastrectomy for a submucosal tumor 40 years ago does not suggest current malignancy, and there is no evidence of diabetes in terms of diagnosis, lab values, or treatments. The patient's current medical issues are related to a hiatal hernia, which was successfully repaired, and there is no indication of active cancer or diabetes."
+2640,"Discharge Summary:
+
+Patient: 74-year-old female with acute non-ST-segment elevation myocardial infarction (NSTEMI).
+
+History: The patient presented with acute NSTEMI and underwent coronary angiography with transradial access. During the procedure, the patient experienced severe pain in her right arm due to spasm of the radial artery.
+
+Hospital Course: Repetitive intravenous administration of midazolam up to 8 mg and nitroglycerine were given. PCI of the lesion in the proximal RCA was then performed using an extra support guidewire, a semi compliant balloon for predilatation, and a drug-eluting stent (DES) for placement. During the procedure, the balloon catheter became stuck at the RCA ostium and attempts to deflate the balloon were unsuccessful. The operator performed transcutaneous puncture of the balloon through the skin and the radial artery wall to retrieve the deflated balloon.
+
+Outcome: Implantation of a second short DES was necessary to mechanically stabilize the lesion. Radial compression was used to close the 6F access site. The clinical follow-up remained uneventful.
+
+Follow-up: The patient is advised to follow up with her primary care physician for continued management of her cardiovascular health.",Diabetes Only,0.8273099299141368,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so I relied heavily on the initial classification and direct text analysis. The AI's classification of ""Neither"" with high confidence (0.9) is supported by the discharge summary, which focuses exclusively on the patient's cardiovascular event and intervention. There is no mention of cancer or diabetes diagnoses, treatments, or relevant lab values in the discharge summary. Given the absence of any evidence for cancer or diabetes in the patient text, the final classification of ""Neither"" is made with high confidence."
+1085,"Discharge Summary:
+
+Patient Name: [Patient Name]
+Medical Record Number: [Medical Record Number]
+Admission Date: [Admission Date]
+Discharge Date: [Discharge Date]
+
+Admission Diagnosis: Lower abdominal pain
+Discharge Diagnosis: Adrenal myelolipoma
+
+Hospital Course:
+A 70-year-old female patient was admitted with complaints of lower abdominal pain that had been present for the past 5 months. She reported constipation and reported that the pain had steadily worsened over time, requiring management with narcotics. On presentation, she had urinary retention that led to the placement of an indwelling Foley catheter which revealed hematuria in the bag. The patient reported anorexia, nausea, abdominal bloating, and worsening of bilateral leg edema but did not exhibit vomiting, hematemesis, chest pain, melena, jaundice, fever, chills, night sweats, or weight loss. A CT scan showed a large heterogeneous but predominantly fatty pelvic mass compressing the bowel and bladder. Two needle core biopsies were done which revealed only benign adipose tissue. Patient was sent for upper and lower gastrointestinal endoscopies and MRI. An MRI showed a 13 cm × 10 cm × 10 cm pelvic mass that appeared well encapsulated and nested between the rectosigmoid and sacrum. There was no suspicious lymphadenopathy. The patient underwent bilateral ureteral stent placement followed by resection of a large 18 cm sacrococcygeal tumor with en-bloc low anterior rectosigmoid resection and Hartmann’s stump.
+
+Final Diagnosis:
+The patient was diagnosed with adrenal myelolipoma based on the histopathological analysis of the tumor tissue.
+
+Summary of Treatment:
+The patient underwent bilateral ureteral stent placement followed by resection of a large 18 cm sacrococcygeal tumor with en-bloc low anterior rectosigmoid resection and Hartmann’s stump.
+
+Follow-Up:
+Upon recent follow-up (status post-resection 3.5 years), the patient was asymptomatic with no tumor recurrence.
+
+Instructions:
+The patient was instructed to follow-up with their primary care physician for regular check-ups and to report any new or worsening symptoms.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, so the decision relies on the initial classification and direct text analysis. The initial AI classification confidently identified the condition as ""Neither"" cancer nor diabetes, citing the benign nature of the adrenal myelolipoma and the absence of any cancer or diabetes-related treatments or symptoms. The discharge summary confirms the diagnosis of a benign adrenal myelolipoma, with no evidence of malignancy or diabetes. The patient's follow-up also shows no recurrence of the tumor, supporting the absence of cancer. Therefore, the final classification is ""Neither"" with high confidence."
+2068,"Discharge Summary:
+
+Patient Name: [Name]
+Date of Admission: [Date]
+Date of Discharge: [Date]
+
+History and Physical:
+The patient is a 78-year-old male who presented with symptoms of chronic anemia and bleeding per rectum. Blood investigations revealed iron deficiency anemia, which was determined to be caused by chronic blood loss from anal hemorrhoids. The patient underwent CT abdomen/pelvis, upper and lower GI endoscopy, which excluded gastrointestinal malignancy. Colonoscopy revealed anal hemorrhoids. Esophagogastroduodenoscopy showed an incidental finding of a yellow-white gastric lesion at the gastric fundus measuring 0.7 cm and a pedunculated gastric polyp at the antrum measuring 1.0 cm.
+
+Past Medical History:
+The patient's past medical history is significant for chronic anemia and hemorrhoids.
+
+Hospital Course:
+The patient's anemia was resolved after ligation of anal hemorrhoids and a 3-month course of oral iron supplement. The patient's gastric lesions did not seem to be contributing to the anemia and were not resected.
+
+Plan and Recommendations:
+No further treatment or follow-up for the incidental gastric lesions was recommended. The patient was advised to continue the iron supplement as prescribed and follow up with his primary care physician for routine monitoring.
+
+Summary:
+In summary, the patient presented with chronic anemia caused by anal hemorrhoids and incidental gastric lesions were discovered during investigations. The patient's anemia was resolved after ligation of anal hemorrhoids and a course of oral iron supplements. The gastric lesions were not contributing to the anemia and were not resected. The patient was advised to continue iron supplementation and follow up with his primary care physician for routine monitoring.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently determined that the patient has neither cancer nor diabetes, with a confidence level of 1.0. The reasoning was sound, as the discharge summary explicitly stated that gastrointestinal malignancy was excluded through imaging and endoscopic investigations, and there was no mention of diabetes or related criteria. Direct examination of the patient text confirmed the absence of any cancer or diabetes diagnosis, treatments, or lab values meeting diagnostic thresholds. Therefore, the final classification is that the patient has neither condition, with high confidence."
+109,"Discharge Summary:
+
+Patient: 70-year-old female referred to our clinic for progressive NTG.
+
+Hospital Course:
+
+The patient presented with NTG with a BCVA of 0.5 and 1.0 in the right and left eyes, respectively. The IOP while on glaucoma drops was 15 and 16 mm Hg for the right and left eyes, respectively. Upon examination, both discs appeared clearly glaucomatous with C/D = 0.8–0.9 and disc hemorrhage was noted on the right side.
+
+The patient underwent an MR scan, which revealed pituitary macroadenoma affecting the chiasm, measuring 24 × 30 × 20 mm. The patient underwent a transsphenoidal resection to remove the tumor. Following surgery, the VF improved very rapidly and has remained stable for 4 years.
+
+Summary:
+
+This case report describes a 70-year-old female who was referred to our clinic for progressive NTG. She was found to have pituitary macroadenoma affecting the chiasm, which was deemed responsible for the bitemporal hemianopia observed in her VF. Following the tumor's removal, the patient's VF improved and has remained stable for four years.
+
+To the best of our knowledge, coexistence of true glaucoma was observed in less than 1% of cases with this medical presentation. The patient's glaucoma was observed to progress, although interestingly, surgical excision of the tumor halted its progression. The influence of the adenoma on the optic disc appearance is still uncertain.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, so the decision relies on the initial classification and direct text analysis. The initial classification confidently identified neither cancer nor diabetes, citing the presence of a pituitary macroadenoma, which is a benign tumor, and the absence of any cancer or diabetes-related treatments or diagnostic criteria. The discharge summary confirms the presence of a pituitary macroadenoma and its surgical removal, with no mention of malignancy or diabetes. Therefore, the evidence strongly supports the conclusion that the patient does not have cancer or diabetes."
+2941,"Discharge Summary:
+
+Patient Name: [REDACTED]
+Medical Record Number: [REDACTED]
+Date of Admission: [REDACTED]
+Date of Discharge: [REDACTED]
+
+Chief Complaint:
+Slurred speech, unsteadiness and fatigue.
+
+Diagnosis:
+Haemorrhagic transformation of embolic ischaemic infarcts secondary to left atrial myxoma.
+
+Hospital Course:
+The patient presented with slurred speech, unsteadiness, and fatigue. She was found to have multiple supra- and infratentorial lesions with haemosiderin staining. The initial differential diagnoses were haemorrhagic metastases (recurrent melanoma) or an atypical presentation of amyloid angiopathy. CT chest identified a mass in the left atrium, which was later confirmed to be an atrial myxoma. Histological assessment was non-contributory towards a diagnosis. The excised material consisted of haemorrhage and some distortion of the underlying vascular architecture, without evidence of vasculitis or amyloid angiopathy. The patient underwent left atrial myxoma excision and therapeutic heparin cover on a cardiopulmonary bypass machine. The patient had an uncomplicated post-operative course and a normal post-operative echocardiogram. She was discharged home with a follow-up MRI and neurosurgical review booked at 6 weeks.
+
+Medical Management:
+The patient was prescribed dexamethasone and referred to Interventional radiology for formal cerebral angiography assessment to evaluate for cerebral vasculitis.
+
+Follow-up:
+Follow-up MRI and neurosurgical review booked at 6 weeks.
+
+Condition at Discharge:
+Stable.
+
+Discharge Medications:
+None.
+
+Instructions:
+None.
+
+Follow-up Appointments:
+Follow-up MRI and neurosurgical review booked at 6 weeks.
+
+Follow-up Investigations:
+Follow-up MRI and neurosurgical review booked at 6 weeks.
+
+Signed,
+[Physician Name] MD.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial AI classification confidently identified neither cancer nor diabetes, citing the atrial myxoma as a benign tumor and the lack of evidence for diabetes. The discharge summary supports this, as it confirms the mass was a benign atrial myxoma and does not mention any diabetes-related criteria or treatments. There is no evidence of active cancer or diabetes in the patient's current condition, leading to a high-confidence classification of neither condition."
+2834,"Discharge Summary:
+
+Patient Information: 
+Name: [Patient's Name]
+Age: 51-years-old
+Gender: Female
+Medical Record Number: [Patient's MRN]
+
+Hospital Course:
+The patient presented to the hospital with complaints of chest pain for three days and vomiting for one day. She had a past medical history of type 2 diabetes mellitus and reported episodes of palpitation, sweating, and weakness for three years. The patient's blood pressure was 130/80 mmHg, pulse was 117/min, respiration was 24/min, and oxygen saturation was 100% in room air on admission. She experienced episodes of orthostatic hypotension with systolic blood pressure ranging from 60 to 130 mmHg and diastolic BP ranging from 30 to 90 mmHg while at the hospital. Electrolyte panel showed low magnesium, calcium, and potassium levels, and hyperglycemia required an insulin drip. A computed tomography angiogram was performed to rule out pulmonary embolism, but a large suprarenal hypoattenuating mass was incidentally detected which was confirmed to be an 11 cm x 11 cm right suprarenal heterogeneous mass on contrast-enhanced CT and MRI. The patient was diagnosed with pheochromocytoma and started on preoperative management. Three weeks later, the patient underwent right adrenalectomy. The pathology of the tumor confirmed it as a pheochromocytoma. She was stable postoperatively, and her electrolyte and glucose levels normalized.
+
+Hospital Diagnoses:
+1. Pheochromocytoma
+
+Hospital Procedures:
+1. Right adrenalectomy
+
+Hospital Outcomes:
+The patient underwent successful right adrenalectomy for pheochromocytoma. Postoperatively, she remained hemodynamically stable with no hypotensive episodes. Her electrolytes and blood glucose levels were normalized, and her laboratory data recorded six weeks after surgery showed normal 24-hour urine metanephrine and normetanephrine and normal serum potassium, magnesium, and calcium levels.
+
+Follow-up Care:
+1. Follow-up with oncology for regular surveillance.
+
+Discharge Medications:
+None
+
+Conditions/Treatments at the Time of Discharge:
+1. Stable condition after right adrenalectomy for pheochromocytoma.",Both,1.0,Diabetes Only,0.0,1.0,0.95,Diabetes Only,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial classification confidently identified diabetes based on the patient's history of type 2 diabetes mellitus and the need for an insulin drip during hospitalization, which aligns with the diagnostic criteria for diabetes. The discharge summary confirms the presence of type 2 diabetes mellitus and the use of insulin, supporting the diagnosis of diabetes. The identified mass was a pheochromocytoma, a benign tumor, and not cancer, as confirmed by pathology. The follow-up with oncology is for surveillance, not cancer treatment. Therefore, the evidence strongly supports the presence of diabetes and the absence of cancer."
+952,"Hospital Course:
+
+The patient was a 34-year-old man who presented to the urology outpatient clinic with a complaint of swelling in the left testis for the past 3 years. The swelling gradually increased in size but was not associated with pain or fever. Physical examination revealed a firm, nontender mass of 2.5 × 2.0 cm attached near the lower pole of the left testis with an associated lax hydrocele. Baseline hematological and biochemistry workup was normal, as were serum markers for germ cell tumor of the testes. An ultrasound scan showed a well-circumscribed lesion associated with the left testis, which was suspicious for a neoplastic process.
+
+Hospital Course:
+
+The patient underwent an ultrasound of the abdomen, which did not reveal any evidence of lymphadenopathy. Based on the clinical and radiological findings, the patient was diagnosed with a suspicious left testicular mass. The patient was counseled on the different treatment options, including surgical management, and he opted for surgical removal of the left testis. The procedure was uneventful, and the patient had an uncomplicated postoperative course. He was discharged home on the second postoperative day with instructions for wound care and follow-up appointments. The patient was advised to continue to monitor his remaining testis for any changes or abnormalities and to seek medical attention if necessary.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context and initial classification both indicate neither cancer nor diabetes, with the AI classification having a high confidence of 0.9. The patient discharge summary describes a suspicious testicular mass, but there is no biopsy or histopathological confirmation of malignancy, which is necessary for a cancer diagnosis. Additionally, there is no mention of diabetes-related symptoms, treatments, or lab values meeting diagnostic criteria. Therefore, based on the available evidence, the patient does not have a confirmed diagnosis of cancer or diabetes."
+2912,"Discharge Summary:
+
+Patient Name: [REDACTED]
+Gender: Male
+Age: 54 years
+Date of Admission: [REDACTED]
+Date of Discharge: [REDACTED]
+
+Chief Complaint:
+Progressively worsening neck pain and numbness of the left upper extremity and the left face for the past 2 weeks.
+
+History of Present Illness:
+The patient was experiencing progressively worsening neck pain and numbness of the left upper extremity and the left face for the past 2 weeks. He did not report any recent head or neck injuries. He was followed closely without further treatment, but the symptoms gradually worsened. He visited our hospital for further examination and treatment two months after the onset. 
+
+Past Medical History:
+The patient's past medical history was not significant for t2d, htn, or cvd.
+
+Physical Examination:
+The neurological examination revealed a mildly spastic gait and exaggerated deep tendon reflexes in the bilateral upper and lower extremities. He also had mild dysuria and constipation. Muscle strength and vibration sense were normal, and no Babinski sign was present.
+
+Diagnostic Tests:
+Peripheral blood examination revealed no significant abnormality. Cerebrospinal fluid examination was within normal limits except for slightly elevated protein. Unenhanced CT of the cervicothoracic spine showed diffuse dorsal epidural calcification at C3-T6. The lesion presented as a crescent shape along the spinal dura mater and had a well-defined border along the vertebral arch. On MR imaging, the lesion appeared as a hypointense mass on both pre-contrast T1 and T2 weighted images. The lesion displayed heterogeneous enhancement, and caused cervical spinal canal stenosis. Head CT and MR imaging revealed no significant abnormality.
+
+Hospital Course:
+C5/6 laminectomy was performed to biopsy for confirmation. Perioperative findings revealed an intact ligamentum flavum. A solid, grayish-white lesion was found just beneath the ligamentum flavum. Histopathological examination of the specimen demonstrated numerous granular calcium crystals within dense fibrous tissue with myxoid change. Grocott, periodic acid-Schiff and Ziehl-Neelsen stains showed no obvious source of infection (e.g. fungal or tubercular), and there was no evidence of malignancy. The patient’s neurological symptoms during the postoperative course were uneventful, and follow-up CT performed 4 months later revealed no regrowth of the calcified lesion.
+
+Diagnosis:
+The patient was diagnosed with CPPD crystal deposition disease along the spinal dura mater.
+
+Summary:
+A 54-year-old male presented with progressively worsening neck pain and numbness of the left upper extremity and the left face. Diagnostic tests revealed CPPD crystal deposition disease along the spinal dura mater. The patient underwent C5/6 laminectomy and biopsy for confirmation. Histopathological examination of the specimen confirmed the diagnosis. The patient’s neurological symptoms during the postoperative course were uneventful, and follow-up CT performed 4 months later revealed no regrowth of the calcified lesion.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently stated that there was no evidence of cancer or diabetes, with a confidence level of 1.0. The discharge summary explicitly mentions that the histopathological examination showed no evidence of malignancy, ruling out cancer. Additionally, the patient's past medical history does not indicate diabetes, and there are no lab results or treatments suggesting a current diabetes diagnosis. Therefore, based on the available evidence, the final classification is that the patient has neither cancer nor diabetes."
+3108,"Discharge Summary:
+
+Patient: 40-year-old male from the Netherlands
+
+Diagnosis: Lymphadenopathy
+
+Hospital Course: The patient presented with a three-month history of unilateral left cervical adenopathy. The CT imaging revealed a 3 cm lymph node in the left level II and several 1 cm left jugulodigastric nodes. The PET scan showed the left level II and jugulodigastric nodes with no involvement of the chest, abdomen, or pelvis. Excisional biopsy revealed native architecture distortion by excessive numbers of large histiocytes with abundant foamy cytoplasm. Emperipolesis was evident on microscopy, but the nodes were free of signs of malignancy. Laboratory tests demonstrated results within normal limits with low concentration of IgG kappa monoclonal proteins.
+
+Treatment: The patient was referred for excisional biopsy.
+
+Follow-up: Long-term follow-up was discussed and arranged to monitor the course of the disease. 
+
+Condition on Discharge: The patient was discharged in stable condition.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so I relied heavily on the initial classification and direct text analysis. The initial classification confidently stated neither cancer nor diabetes, citing the biopsy results showing no malignancy and the absence of diabetes indicators. The discharge summary supports this, as it explicitly mentions the absence of malignancy in the biopsy and lacks any mention of diabetes or related treatments. Therefore, the evidence strongly supports the conclusion that the patient does not have cancer or diabetes."
+2020,"Discharge Summary:
+
+Patient: 61-year-old Caucasian male
+Admission date: 2006
+
+Hospital Course:
+
+The patient presented with subacute, worsening headaches and vomiting. Additionally, alternating but progressive confusion and anomic aphasia had been present for several months. A CT revealed a well-defined, spontaneously hyperattenuating brain lesion in the left frontotemporal lobes, with a small component of the tumor extending into the left cerebellopontine angle in the posterior fossa. There were also cystic components in the lesion and mild to moderate vasogenic edema. An MRI showed a isointense lesion with grey matter, multiple small cystic components, and diffuse, mildly heterogeneous enhancement. The posterior part of the lesion appeared hypointense on T2-weighted images, and it may be related to acute bleeding. The patient underwent surgical excision with postoperative radiotherapy and was free of macroscopic recurrence on follow-up MRI 105 months after the initial diagnosis.
+
+Hospital Course Summary:
+
+The patient was admitted with subacute headaches, vomiting, and alternating confusion and anomic aphasia. Diagnostic imaging revealed a spontaneously hyperattenuating brain lesion in the left frontotemporal lobes with cystic components and mild to moderate vasogenic edema. Surgical excision with postoperative radiotherapy was performed. On follow-up MRI, the patient was free of macroscopic recurrence after 105 months.",Cancer Only,1.0,Neither,0.0,0.0,0.95,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial AI classification confidently indicated neither cancer nor diabetes, citing the absence of current cancer activity and no mention of diabetes. The discharge summary confirms a past brain lesion treated with surgery and radiotherapy, with no recurrence after 105 months, indicating the cancer is not active. There is no mention of diabetes or related criteria in the discharge summary. Therefore, the evidence supports the conclusion that the patient currently has neither cancer nor diabetes."
+1078,"Discharge Summary:
+
+Patient Name: [patient’s name]
+
+Admission Date: [admission date]
+
+Discharge Date: [discharge date]
+
+Medical Record Number: [medical record number]
+
+Hospital Course:
+
+The 9-year-old male patient was admitted to the hospital with a history of recurrent cough and left-lung pneumonia. The patient was given amoxicillin/clavulanic acid, inhaled prednisolone, and salbutamol as medications but the symptoms were only partially reduced. Chest computed tomography showed a mass of parenchymal origin in the lower lobe of the lung invading the left atrium. Transthoracic needle biopsy identified mixed inflammatory cells, and treatment consisting of invasive tumor management was deemed necessary.
+
+Operative Approach:
+
+The patient underwent a left thoracotomy incision and left lower lobectomy was performed to deal with the invasive tumor. A portion of the tumor invading the left atrium was resected along with the intact atrial wall, and the left atrium was repaired with pledgeted sutures. No cardiopulmonary bypass was required.
+
+Histopathological Examination:
+
+After the operation was terminated, the mass was histopathologically examined and identified as an IMT.
+
+Postoperative Period:
+
+The patient's postoperative period was uneventful, and the patient was discharged on the sixth postoperative day.
+
+Diagnosis:
+
+The patient was diagnosed with IMT.
+
+Recommendations:
+
+The patient needs to continue follow-up appointments with the relevant specialists to monitor progress and recovery.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently identified the condition as neither cancer nor diabetes, with a focus on the diagnosis of an Inflammatory Myofibroblastic Tumor (IMT), which is a benign tumor. The patient discharge summary corroborates this, as it explicitly states the diagnosis of IMT, a non-malignant condition, and there is no mention of diabetes or related symptoms, treatments, or lab values. Therefore, the evidence from the discharge summary supports the initial classification, leading to a final decision of neither cancer nor diabetes with high confidence."
+1611,"Comprehensive Discharge Summary
+
+Patient Name: [REDACTED]       
+Gender: Female
+Age: 21
+Admitting Date: [REDACTED]
+Discharge Date: [REDACTED]
+Length of Stay: [REDACTED] days
+
+Hospital Course:
+The patient presented to the dermatology clinic with severe facial acne, rated grade 4 on the Investigator Global Assessment of Acne scale. The patient had been using topical retinoids for several months with no satisfactory results. The patient was started on 20mg isotretinoin, which was maintained for 6 months. The patient presented with mild chelitis and skin dryness, and complained of mild hair fall. Liver enzymes and lipid profile were within the normal range for both the initial laboratory works and the repeated tests done after one month and four months. The patient experienced total clearance of her acne. However, treatment was interrupted because they could not visit the clinic for several weeks.
+
+Two months after stopping the isotretinoin treatment, the patient developed depigmented lesions reminiscent of acrofacial vitiligo. The pattern of the vitiligo persisted despite topical treatment with Antifungal agents, so the patient was prescribed Tacrolimus 0.1% cream, which led to mild improvement of some of the lesions after eight weeks  before recurrence. The patient, in favor of alternative medicine, opted to cease topical treatment and receive homeopathic treatment instead.
+
+Medical History:
+Patient had no history of vitiligo but did have a family history of diabetes, hypertension, and systemic lupus erythematosus. An auntie had died from renal complications of SLE.
+
+Diagnosis:
+Acne, severe facial, clearance achieved with isotretinoin
+Acrofacial vitiligo with complaints of depigmented lesions
+
+Treatment:
+The patient was treated with 20 mg isotretinoin for six months, which led to complete clearance of her acne. The patient then received Antifungal and Tacrolimus 0.1% topical therapy for her vitiligo with mild improvement after eight weeks, but later stopped it in favor of homeopathic treatment.
+
+Follow-up:
+Patient was discharged in good condition. The patient was advised to follow up with the medical clinic given their positive thyroid antibodies and family history of lupus.
+
+Discharge medications:
+The patient had no discharge medications.
+
+Discharge condition:
+Discharged in stable condition.
+
+Discharge instructions:
+- Continue using good sun protection to prevent worsening of existing vitiligo and development of new spots.
+- Regularly follow up with your medical clinic.
+- Consult with your clinicians before considering new treatments.",Diabetes Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, so it could not be evaluated. The initial AI classification confidently determined that the patient does not have cancer or diabetes, citing the absence of any relevant diagnoses or treatments in the discharge summary. Upon direct examination of the patient text, there is no mention of cancer or diabetes diagnoses, treatments, or lab values meeting diagnostic criteria for either condition. The patient's medical issues are related to acne and vitiligo, which are unrelated to cancer or diabetes. Therefore, the final classification is consistent with the initial AI classification, with high confidence."
+989,"Discharge Summary:
+
+Patient Name: XXX
+Gender: Female
+Age: 27 years
+Admission Date: MM/DD/YYYY
+Discharge Date: MM/DD/YYYY
+Admitting Diagnosis: Sclerosing Lymphocytic Lobulitis
+
+Hospital Course:
+
+The patient, a 27-year-old woman, was admitted to our hospital for further investigation upon referral from another hospital where a routine check-up showed changes in the right breast. The patient had a history of left breast cancer diagnosed at the age of 22 and had undergone wide excision, sentinel node procedure, adjuvant chemotherapy, radiotherapy, and hormonal therapy. A follow-up examination, coinciding with the conclusion of hormonal therapy, showed a multifocal nodular contrast enhancement in the retro-areolar region and the lower-outer quadrant of the right breast. The patient's examination was categorized as BIRADS 4, and follow-up included breast ultrasound every six months and a yearly mammogram and MRI of the breasts.
+
+An ultrasound-assisted core biopsy was performed, which revealed dense lymphocytic infiltrate of predominantly B-lymphocytes surrounding the ductulolobular unit and the vessels, in combination with a fibrous stroma of low cellularity and an increase in fibroblasts. This led to a diagnosis of sclerosing lymphocytic lobulitis, with no signs of malignancy detected. 
+
+The patient's hypoechoic lesion on ultrasonography and the multifocal contrast enhancement on MRI gradually diminished over consecutive examinations to a level where it is barely perceptible. The patient was advised to continue regular follow-up examinations.
+
+The patient was discharged on MM/DD/YYYY in stable condition with instructions to continue follow-up examinations as scheduled. Discharge medications included [ OMITTED ]. The patient was advised to follow a healthy lifestyle, which includes regular exercise and a balanced diet, and to report any abnormal symptoms to her healthcare provider.
+
+Discharge Diagnosis: Sclerosing Lymphocytic Lobulitis
+
+Condition at Discharge: Stable
+
+Follow-up: Continue regular follow-up examinations as scheduled.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, so the decision relies heavily on the initial classification and direct text analysis. The initial AI classification confidently determined neither cancer nor diabetes, citing the absence of current malignancy and no evidence of diabetes. The discharge summary confirms a past history of breast cancer, but the recent biopsy showed no malignancy, and there is no mention of diabetes or related criteria. Therefore, the evidence supports the conclusion that the patient currently has neither cancer nor diabetes."
+1613,"Discharge Summary:
+
+Patient Name: [Name]
+Date of Admission: [Date]
+Date of Discharge: [Date]
+Length of Stay: X days
+
+Diagnosis: Intravenous leiomyomatosis
+
+Hospital Course:
+The patient presented with a lower abdominal mass and pain, and was diagnosed with uterine leiomyoma by transcervical needle biopsy. Imaging studies revealed a large heterogeneous tumor occupying the pelvic cavity and an intravascular tumor within the left internal iliac and ovarian veins. The preoperative diagnosis was intravenous leiomyomatosis (IVL) with extension of the tumor into the left internal iliac and ovarian veins.
+
+During surgery, multiple myomas were discovered within the uterine corpus and cervix, and the tumor was found to extend to the parametrium and paracolpium. Detachment of the tumor from the left ureter and vaginal wall was difficult. TAH and BSO were performed, and the left internal iliac vein forming the common iliac vein was transected at the bifurcation region, resulting in complete surgical resection of the tumor. No residual tumor was detected in the venous resection stump. The patient's operative time was 11 hours with a blood loss of 8462 g. 
+
+The histopathological diagnosis of the uterine and intravascular tumors was IVL. The patient demonstrated no evidence of IVL recurrence at their most recent follow-up, which occurred 38 months postoperatively.
+
+Summary of Hospital Course:
+-The patient presented with a lower abdominal mass and pain.
+-The patient was diagnosed with uterine leiomyoma via needle biopsy.
+-Imaging studies revealed a large heterogeneous tumor occupying the pelvic cavity and an intravascular tumor within the left internal iliac and ovarian veins, leading to a diagnosis of IVL.
+-The patient underwent a lengthy surgery involving TAH, BSO, and transection of the left internal iliac vein forming the common iliac vein.
+-The tumor was successfully removed, resulting in complete surgical resection.
+-The patient's histopathological diagnosis was IVL.
+-The patient demonstrated no evidence of IVL recurrence at their most recent follow-up, which occurred 38 months postoperatively.",Cancer Only,1.0,Neither,0.0,0.0,1.0,Neither,"The retrieval context was not provided, but the initial AI classification confidently identified the condition as neither cancer nor diabetes, with a focus on intravenous leiomyomatosis (IVL), a benign condition. The discharge summary confirms the diagnosis of IVL, a non-malignant smooth muscle tumor, and details a successful surgical resection with no recurrence after 38 months. There is no mention of diabetes or related criteria in the patient text. Therefore, the evidence strongly supports the classification of neither cancer nor diabetes."
