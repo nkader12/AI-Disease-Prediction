@@ -46,15 +46,17 @@ class LLMAgentSystem:
     
     def _load_healthcare_prompt(self) -> str:
         """Load healthcare classification prompt"""
-        return """You are a medical record classification expert specializing in identifying CURRENT cancer and diabetes diagnoses from hospital discharge summaries.
+        return """You are a medical record classification expert specializing in identifying cancer and diabetes diagnoses from hospital discharge summaries.
 
-Your task is to classify whether a patient CURRENTLY has:
-- Cancer (any active malignancy)
-- Diabetes (Type 1, Type 2, or gestational diabetes mellitus) 
+CRITICAL BUSINESS CONTEXT:
+- CANCER: Classify as YES if there is ANY mention of cancer, malignancy, or cancer-like conditions (past, present, under treatment, or in remission)
+- DIABETES: Classify as YES ONLY if the patient CURRENTLY has diabetes (not prediabetes or resolved diabetes)
+
+Your task is to classify whether a patient has:
+- Cancer (ANY history or current cancer/malignancy)
+- Diabetes (CURRENT diabetes only) 
 - Both conditions
 - Neither condition
-
-CRITICAL: You are looking for CURRENT Diabetes, and ANY form of Cancer
 
 =================================================================================
 DIABETES DIAGNOSTIC CRITERIA (Source: American Diabetes Association 2024-2025)
@@ -93,59 +95,79 @@ DO NOT classify as diabetes:
 - "Rule out diabetes" or "screening for diabetes"
 
 =================================================================================
-CANCER DIAGNOSTIC CRITERIA (Source: MSD Manual, NCI, Multiple Medical Sources)
+CANCER DIAGNOSTIC CRITERIA (INCLUSIVE - Business Context)
 =================================================================================
 
-DEFINITIVE CANCER INDICATORS:
-1. Explicit malignancy diagnoses:
+CLASSIFY AS CANCER (ANY of the following):
+1. Explicit malignancy diagnoses (current or historical):
    - Any cancer type: carcinoma, adenocarcinoma, lymphoma, leukemia, sarcoma, melanoma
    - Specific examples: glioblastoma, myeloma, mesothelioma, neuroblastoma
    - Staging information: TNM staging, Stage 0-IV, AJCC staging
+   - "History of [cancer type]" - even if past or in remission
 
-2. Histopathologic confirmation (gold standard):
+2. Histopathologic confirmation:
    - "Biopsy confirmed malignancy"
    - "Pathology report shows [cancer type]"
    - "Histologic diagnosis of [cancer]"
 
-3. Cancer-specific treatments:
+3. Cancer-specific treatments (past or present):
    - Chemotherapy for malignancy
    - Radiation therapy for cancer
-   - Surgical resection of malignant tumor
+   - Surgical resection of tumor with oncology follow-up
    - Immunotherapy, targeted therapy for cancer
 
-4. Metastatic disease:
+4. Borderline/Cancer-like conditions:
+   - Langerhans Cell Histiocytosis (LCH)
+   - Histiocytosis
+   - Desmoid fibromatosis requiring oncology follow-up
+   - Any tumor requiring "oncologist" follow-up or monitoring for "recurrence/metastasis"
+   
+5. Metastatic disease or cancer remission:
    - "Metastases to [organ]"
    - "Stage IV disease"
-   - "Distant spread"
+   - "Cancer in remission"
+   - "Post-cancer treatment follow-up"
+
+6. Oncology involvement:
+   - Follow-up with oncologist
+   - Oncology monitoring
+   - Cancer surveillance imaging
 
 DO NOT classify as cancer:
-- Benign tumors, cysts, polyps
-- "Mass" or "lesion" without biopsy confirmation
-- "Suspicious for malignancy" without confirmation
-- "Rule out cancer"
-- Precancerous conditions (dysplasia, carcinoma in situ may or may not be cancer depending on context)
+- Purely benign tumors with NO oncology involvement (e.g., simple cysts, lipomas)
+- "Mass" or "lesion" confirmed benign with NO oncology follow-up
+- "Rule out cancer" with negative workup
+- Prediabetes or metabolic syndrome
 
 =================================================================================
-TEMPORAL CONTEXT RULES
+TEMPORAL CONTEXT RULES (DIFFERENT FOR CANCER VS DIABETES)
 =================================================================================
 
-ACTIVE/CURRENT diagnosis = HAS the condition:
-- "Patient has diabetes"
-- "History of diabetes" (chronic condition, still present)
-- "Known diabetic"
-- "Patient's diabetes"
-- "Active malignancy"
-- "Undergoing chemotherapy for [cancer]"
+CANCER (ANY history = YES):
+- "Active malignancy" → YES
+- "History of cancer" → YES (even if in remission or resolved)
+- "Previous cancer, now in remission" → YES
+- "Post-cancer treatment" → YES
+- "Cancer surveillance" → YES
+- "Undergoing chemotherapy" → YES
+- "Past diagnosis of [cancer]" → YES
 
-PAST/RESOLVED = DOES NOT HAVE the condition:
-- "Previous cancer, now in remission"
-- "History of cancer, successfully resected 10 years ago"
-- "Past diagnosis of [condition], no longer active"
+DIABETES (CURRENT only = YES):
+- "Patient has diabetes" → YES
+- "History of diabetes" → YES (chronic condition, still present)
+- "Known diabetic" → YES
+- "Patient's diabetes" → YES
+- "On metformin" or other diabetes medications → YES
 
-UNDER INVESTIGATION = DOES NOT HAVE the condition:
-- "Rule out cancer"
-- "Suspected malignancy"
-- "Evaluate for diabetes"
+DIABETES (PAST/RESOLVED = NO):
+- "Previous gestational diabetes, resolved after pregnancy" → NO
+- "Prediabetes" → NO
+- "Impaired glucose tolerance" → NO
+
+UNDER INVESTIGATION (= NO for both):
+- "Rule out cancer" → NO
+- "Suspected malignancy" (not confirmed) → NO
+- "Evaluate for diabetes" → NO
 
 =================================================================================
 CLASSIFICATION PROCESS
@@ -175,6 +197,10 @@ Now classify this patient discharge summary:
     def _load_final_decision_prompt(self) -> str:
         """Load final decision prompt"""
         return """You are a senior medical record analyst making FINAL classification decisions for cancer and diabetes diagnoses.
+
+CRITICAL BUSINESS CONTEXT:
+- CANCER: Classify as YES if there is ANY mention of cancer, malignancy, or cancer-like conditions (past, present, under treatment, or in remission)
+- DIABETES: Classify as YES ONLY if the patient CURRENTLY has diabetes (not prediabetes or resolved diabetes)
 
 You have been provided with:
 1. Similar patient cases from a medical database (RETRIEVAL CONTEXT)
@@ -210,27 +236,31 @@ STEP 4: MAKE FINAL DECISION
 - If similar cases have MIXED labels → Give more weight to direct text analysis
 
 =================================================================================
-DIAGNOSTIC CRITERIA REFERENCE
+DIAGNOSTIC CRITERIA REFERENCE (Business Context)
 =================================================================================
 
-DIABETES:
+DIABETES (CURRENT only):
 - Explicit: "diabetes mellitus", "T1DM", "T2DM", "history of diabetes"
 - Labs: FPG ≥126 mg/dL, HbA1c ≥6.5%, random glucose ≥200 mg/dL with symptoms
 - Treatments: insulin, metformin, sulfonylureas
 - Complications: DKA, diabetic retinopathy/nephropathy/neuropathy
-- NOT diabetes: "polyuria/polydipsia" alone, prediabetes, transient hyperglycemia
+- NOT diabetes: "polyuria/polydipsia" alone, prediabetes, transient hyperglycemia, resolved gestational diabetes
 
-CANCER:
+CANCER (ANY history):
 - Explicit: carcinoma, lymphoma, leukemia, sarcoma, melanoma, with staging
 - Confirmation: biopsy-proven malignancy, histopathology
-- Treatments: chemotherapy, radiation therapy, surgical resection of malignant tumor
+- Treatments: chemotherapy, radiation therapy, surgical resection with oncology follow-up
 - Metastases: Stage IV, distant spread, metastases to organs
-- NOT cancer: benign tumors, "rule out cancer", suspicious but unconfirmed lesions
+- Borderline conditions: LCH (Langerhans Cell Histiocytosis), histiocytosis, desmoid fibromatosis
+- Oncology involvement: follow-up with oncologist, cancer surveillance
+- History: "history of cancer", "cancer in remission", "post-cancer treatment"
+- NOT cancer: purely benign tumors with NO oncology involvement, "rule out cancer" with negative results
 
 TEMPORAL CONTEXT:
-- "History of [condition]" for chronic diseases = CURRENT diagnosis
-- "Previous [condition], now in remission" = NOT current
-- "Rule out [condition]" = NOT confirmed
+- CANCER: "History of cancer" or "previous cancer" = YES (any history counts)
+- DIABETES: "History of diabetes" = YES (chronic condition, still present)
+- DIABETES: "Previous gestational diabetes, resolved" = NO
+- "Rule out [condition]" without confirmation = NO
 
 =================================================================================
 OUTPUT FORMAT (STRICT - MUST FOLLOW EXACTLY)

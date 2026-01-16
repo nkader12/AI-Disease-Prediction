@@ -1,0 +1,177 @@
+patient_id,text,true_label,true_has_cancer,true_has_diabetes,initial_classification,final_classification,pred_has_cancer,pred_has_diabetes,initial_confidence,final_confidence,correct,correct_cancer,correct_diabetes,decision_rationale
+1047,"Discharge Summary
+
+Patient Name: [REDACTED]
+Gender: Male
+Age: 62 years
+Medical Record Number: [REDACTED]
+
+Hospital Course:
+The patient was admitted to the hospital for the treatment of bullous hemorrhagic dermatosis. He had a history of morbid obesity, coronary artery disease, lipodermatosclerosis of the lower extremities, chronic peripheral venous insufficiency, and prostate cancer (Gleason 4+5) on long-term androgen deprivation therapy. The patient had a small renal tumor for which he was followed with imaging. He had a distant history of varicose vein ligation. The patient was started on enoxaparin 120 mg by subcutaneous injection twice daily after an incidental pulmonary embolism was discovered during surveillance imaging for his prostate cancer. Within several days of starting the anticoagulation therapy, the patient developed small black blisters on his hands that resolved spontaneously. The patient, however, did not report or observe these blisters during clinic visits. Four months after starting enoxaparin therapy, the patient presented with several large hemorrhagic bullae on his calves. His coagulation values and platelet count were within normal range. The diagnosis of bullous hemorrhagic dermatosis (BHD) was made by visual inspection. Enoxaparin was discontinued and apixaban was started as an alternative anticoagulation therapy. The lesions healed in 3 weeks with intensive outpatient wound care and have not recurred to date while on apixaban.
+
+Conditions at Discharge:
+The patient was discharged in stable condition with a plan for follow-up appointments with his primary care physician and outpatient care team.
+
+Instructions:
+The patient was advised to continue the alternative anticoagulation therapy (apixaban) as prescribed and to not restart enoxaparin or any other anticoagulation therapy without consulting his healthcare provider. He was also advised to keep the wound areas clean and dry and to avoid direct sun exposure. The patient was instructed to seek medical attention immediately if any new lesions appear or if he experiences any adverse reactions to his prescribed medications. The patient was advised to follow a healthy diet and exercise plan and to manage his comorbidities as per his healthcare provider's instructions.
+
+Follow-up:
+The patient will follow up with his primary care physician within 2 weeks of discharge and will have a telehealth follow-up visit with his outpatient care team in 4 weeks. Further follow-up appointments will be as per his healthcare provider's recommendations.
+
+Signed,
+[Attending Physician's Name] MD",Cancer Only,1.0,0.0,Cancer Only,Cancer Only,1.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a mix of cases, with some having cancer and others having neither condition. However, the initial AI classification confidently identified the presence of cancer, citing explicit evidence of prostate cancer and ongoing androgen deprivation therapy, which is consistent with the diagnostic criteria for cancer. The patient discharge summary corroborates this by mentioning prostate cancer and related treatments, with no indication of current diabetes or related treatments. Therefore, the final classification is ""Cancer Only"" with high confidence."
+790,"Hospital Course:
+
+The 54-year-old Chinese male was admitted to our hospital for further investigation of an incidental liver mass. The patient had a history of hypertension for ten years and diabetes mellitus for five years. The patient also had a surgical history of splenectomy. The patient denied any liver cirrhosis and was negative for both hepatitis B virus (HBV) and hepatitis C virus (HCV).
+
+Diagnostic and Therapeutic Interventions:
+
+The patient underwent abdominal ultrasonography (US) and abdominal computed tomography (CT) scan, which revealed a 5cm iso-echoic lesion in the left hepatic lobe, and an oval, slightly hypodense mass located in segment IV of the left liver, measuring 4.5 × 3.3cm. The patient was then subjected to abdominal magnetic resonance imaging (MRI), which showed a slightly hypointense mass on both T1- and T2-weighted images, appearing slightly hyperintense on diffusion-weighted images. A partial hepatectomy and cholecystectomy were performed, followed by a postoperative hematoxylin and eosin staining that revealed sinusoidal structures and lymphoid tissue hyperplasia. Detailed immunohistochemical staining showed positivity for CD3 and CD20, specific markers for lymphocyte T cells and B cells, respectively.
+
+Diagnoses:
+
+The patient was diagnosed with intrahepatic splenosis, which was confirmed by the detection of a capsule separating the spleen tissue from liver tissue.
+
+Condition on Discharge:
+
+The patient was discharged home in good condition.
+
+Discharge Medications:
+
+No medications were prescribed on discharge.
+
+Follow-up Care:
+
+The patient was advised for regular follow-up after discharge.",Diabetes Only,0.0,1.0,Diabetes Only,Diabetes Only,0.0,1.0,1.0,1.0,True,True,True,"The retrieval context shows a mix of cases, with some having cancer and others neither condition, but none with diabetes. The initial AI classification confidently identified diabetes based on the explicit mention of a five-year history of diabetes mellitus, which aligns with the diagnostic criteria for a current diabetes diagnosis. The patient text confirms this history and lacks any mention of cancer or malignancy, with the liver mass identified as benign intrahepatic splenosis. Given the clear evidence of diabetes and absence of cancer, the final classification is ""Diabetes Only"" with high confidence."
+3146,"Hospital Course Summary:
+
+Admission Date: [Date of Admission]
+Discharge Date: [Date of Discharge]
+
+Patient Information:
+Name: [Patient Name]
+Age: 33
+Gender: Female
+Medical Record Number: [Patient MRN]
+Condition: Epistaxis
+
+Hospital Course:
+The patient presented to the emergency department with left nasal bleeding and a one-month history of persistent left-sided nasal obstruction. The patient was free of medical diagnoses and had no personal or family history of bleeding disorders or any other conditions. Anterior nasal packing was applied, and bleeding stopped two hours later. The patient returned to the emergency department two more times for epistaxis and was managed conservatively. The patient delivered a healthy baby and was taken to the ORL clinic for reassessment. A CT scan revealed a heterogeneously enhanced soft tissue mass, and the patient agreed to undergo surgical excision. The mass was diagnosed as LCH. Postoperatively, left-sided nasal obstruction markedly improved, and the patient was completely asymptomatic during follow-up appointments.
+
+Diagnosis: LCH
+
+Discharge Condition: The patient was discharged in good condition.
+
+Discharge Instructions:
+The patient is advised to continue nasal saline irrigation and avoid nasal trauma or picking. The patient is instructed to follow up with the ORL clinic as needed.
+
+Signed, 
+[Attending Physician Name]
+[Date]",Cancer Only,1.0,0.0,Cancer Only,Cancer Only,1.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a pattern where similar cases with LCH are classified as Cancer Only, supporting the initial AI classification. The AI's reasoning is sound, with a high confidence level, correctly identifying LCH as a cancer-like condition requiring oncology follow-up. The patient text confirms the diagnosis of LCH, which aligns with the cancer diagnostic criteria. There is no mention of diabetes or related symptoms, treatments, or lab values in the patient text, reinforcing the decision to classify as Cancer Only."
+2117,"Hospital Course:
+
+The patient is a 10-year-old girl who presented with a firm, painless swelling in the distal right forearm. X-ray examination revealed a large lobulated, compartmentalized, osteolytic, expansive tumor mass in the metadiaphysis of the distal radius. On MRI, the tumor measured 35 × 46 × 47 mm and had a well-defined boundary, but no sclerotic margin. Imaging features were consistent with a destructive tumor that originated from the distal radius, grew slowly, and then broke through the cortex of the radius into the adjacent soft tissue.
+
+Diagnostic tests revealed a CTNNB1 hotspot class 5 pathogenic variant in exon 3: p.Ser45Phe. Additionally, cytogenetic analysis revealed a normal female karyotype with trisomy 8 detected in 2 cells. On gross examination, the largest tumor fragment measured 6 × 5 × 3 cm. Tumor histology was reminiscent of desmoid fibromatosis and consistent with desmoplastic fibroma.
+
+The patient underwent intralesional excision of the tumor and tolerated the procedure well. Wrist function was unimpaired postoperatively.
+
+The patient was discharged in stable condition and will receive follow-up with an oncologist to monitor for recurrence or metastasis. The patient and family are to be educated on signs and symptoms to report to a healthcare provider. They are to be counseled on the possibility of needing additional testing and imaging in the future.",Cancer Only,1.0,0.0,Cancer Only,Cancer Only,1.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a strong pattern of similar cases being classified as ""Cancer Only,"" with high similarity scores and consistent evidence of cancer-like conditions. The initial AI classification also confidently identified the condition as cancer-related due to the diagnosis of desmoplastic fibroma and the need for oncology follow-up, which aligns with the business context criteria for cancer. The patient discharge summary confirms the presence of desmoplastic fibroma and the requirement for ongoing oncological monitoring, further supporting the classification of ""Cancer Only."" There is no mention of diabetes or related criteria in the patient text, reinforcing the negative classification for diabetes."
+2901,"Hospital Course:
+
+The patient, a 16-year-old male with a history of relapsing nephrotic syndrome secondary to minimal change disease, presented to the emergency department with acute onset left flank pain and frank haematuria. Imaging tests revealed acute complete thrombosis of the circumaortic left renal vein, with extension into the inferior vena cava (IVC), and moderate perinephric free fluid. The patient was started on unfractionated heparin and underwent endovascular pharmacomechanical thrombolysis and thrombectomy to restore patency of the left renal vein and IVC. The patient tolerated the procedure well without complications and continued on systemic anticoagulation. Follow-up imaging tests showed the IVC and left renal vein to be patent without evidence of residual or recurrent thrombus.
+
+Discharge Summary:
+
+The patient, a 16-year-old male with a history of nephrotic syndrome secondary to minimal change disease, was admitted to the hospital with acute left flank pain and frank haematuria. Imaging tests revealed acute complete thrombosis of the circumaortic left renal vein, with extension into the inferior vena cava (IVC), and moderate perinephric free fluid. The patient underwent endovascular pharmacomechanical thrombolysis and thrombectomy with no complications and was continued on systemic anticoagulation. Follow-up imaging tests showed the IVC and left renal vein to be patent without evidence of residual or recurrent thrombus. 
+The patient was discharged in stable condition and instructed to follow up with their primary care physician and paediatric nephrologist.",Neither,0.0,0.0,Neither,Neither,0.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a majority of similar cases classified as ""Neither,"" with only one case indicating cancer, which is not strongly similar. The initial AI classification confidently identified no evidence of cancer or diabetes, citing the absence of relevant diagnoses or treatments in the discharge summary. Direct examination of the patient text confirms no mention of cancer or diabetes, with the medical history focused on nephrotic syndrome and thrombosis treatment. Given the consistent evidence across all sources, the final classification is ""Neither"" with high confidence."
+461,"Hospital Course:
+The patient presented with left lower quadrant abdominal pain and elevated creatinine, which was subsequently identified on routine blood draw at a follow-up urology appointment. Computed tomography abdomen revealed hydronephrosis of the left kidney as well as bilateral ureteral thickening. The patient had a right ureter stent placed one month prior after presenting with acute kidney injury.
+
+Diagnostic Assessment:
+Urinalysis and pregnancy testing were negative. Further workup, including chest x-ray, sexually transmitted infection testing, complement activity levels, and other autoimmune markers, was negative. Biopsies of ureter specimens showed findings of benign epithelial growth and chronic inflammation.
+
+Treatment and Procedures:
+During this admission, a stent was placed in the left ureter and the right ureter stent was replaced. Repeat biopsies of both the right and left ureters showed findings of benign epithelial growth and chronic inflammation.
+
+Follow-up Plan:
+The patient was discharged home symptom-free with close urologic follow-up.",Neither,0.0,0.0,Neither,Neither,0.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a strong pattern of similar cases being classified as ""Neither,"" with only one case labeled as ""Cancer Only"" but with a lower similarity score. The initial AI classification confidently identified the case as ""Neither,"" citing the absence of any cancer or diabetes indicators, which aligns with the diagnostic criteria. Direct examination of the patient text confirms no mention of cancer or diabetes, with biopsy results indicating benign epithelial growth and no evidence of malignancy or diabetes-related conditions. Therefore, the final classification is ""Neither"" with high confidence."
+141,"Discharge Summary:
+
+Patient Name: N/A
+Gender: Male
+Age: 52
+
+Hospital course: The patient was admitted to the emergency room due to repeated lipothymia, hematemesis, and melaena. Upon admission, the patient was hemodynamically unstable and showed acute anemia, with a hemoglobin value of 6g/dL. The patient had a history of non-steroidal anti-inflammatory drugs (NSAIDs) therapy and enalapril therapy for hypertension. A computed tomography (CT) scan of the abdomen revealed a narrow lumen of the second portion of the duodenum, and an esophagus-gastro-duodenoscopy (EGDS) examination revealed multiple sub-centimeter lymph node formations in the stomach. The patient's condition worsened, and he was transferred to Intensive Care, was intubated, and underwent therapy to restore hemodynamic balance. An emergency gastroscopy was performed, which revealed an ulcerative lesion of the duodenal bulb with circumferential extension to the intestinal wall. On the fifth day, the hemodynamics were unstable, and the anemia persisted; conditions precipitated due to common complications of hypovolemia. Hemorrhagic shock and peritonitis due to enterobiasis were assessed as causes of death.
+
+Autopsy findings: After 72 h, an autopsy was performed. Femoral blood was analyzed for alcohol and volatiles by head-space gas chromatography coupled with a flame ionization detector. All post-mortem specimens were screened for the presence of the main different classes of drugs using immunological or chromatographic methods as appropriate. A systematic toxicological analysis was performed by the LC-MS/MS system in multiple reaction monitoring mode.
+
+Diagnosis: Hemorrhagic shock and peritonitis due to enterobiasis.
+
+Disposition: Deceased.
+
+Follow-up: There is no follow-up required as the patient is deceased.",Neither,0.0,0.0,Neither,Neither,0.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a mix of cases, with some having cancer and others having neither condition, but the initial AI classification confidently identified neither cancer nor diabetes, citing a lack of explicit diagnoses or treatments for either condition. The patient text confirms this, as there is no mention of cancer, malignancy, or diabetes, nor any treatments or lab values indicative of these conditions. The autopsy and discharge summary focus on hemorrhagic shock and peritonitis due to enterobiasis, with no evidence of cancer or diabetes. Therefore, the final classification is ""Neither"" with high confidence."
+1534,"Hospital Course:
+The patient, a 55-year-old female, was admitted to Mudanjiang Forestry Central Hospital with symptoms including dizziness, gait disturbance, and headache. Upon admission, the patient displayed a body temperature of 39.5 °C, blood pressure of 125/70 mm Hg, pulse rate of 60 beats/min, and respiration of 18 breaths/min. The neurological examination revealed moderate nuchal rigidity. Routine blood tests indicated an inflammatory response, with elevated neutrophil—granulocyte proportion and CRPs. An engorged adult tick had been removed from the patient two weeks before admission. Eleven days after tick removal, she had visited a local clinic with persistent high fever up to 42.0 °C and received supportive treatment with compound paracetamol tablets for two days with no clinical improvement. The routine test for the antibody of Borellia spp. and TBEV in cerebrospinal fluid (CSF) was negative for TBEV but positive for IgG antibody against Borrelia burgdorferi sensu lato (sl) at titer of 1:256 in the serum, leading to a presumptive diagnosis of Lyme disease. During her 10-day admission, the patient was administered doxycycline (100 mg/twice daily).
+
+Diagnostic Tests:
+Laboratory tests of blood showed 53.1 U/L for alanine aminotransferase, 54.3 U/L for aspartate transaminase, and 78.0 U/L for gamma-glutamyl transferase in the blood that was collected on the day of admission, with 0.15 g/L protein detected in urine. CSF tests revealed 0.4 g/L of protein, 4.28 mmol/L of glucose, and 125.3 mmol/L of chloride chloridate, with no white blood cell (WBC) or red blood cell (RBC) in the CSF, collected at four days after hospitalization, and presented visually crystal clear and faint yellow. 
+
+Hospital Course and Treatment:
+During her 10-day admission, the patient was administered doxycycline (100 mg/twice daily) for treatment of Lyme disease. On April 15, 2015, almost two years after initial infection, no Colpodella spp. HLJ strain was detected, indicating no chronic or relapsing infection.
+
+Follow-up:
+In addition, the hospital conducted a screening for Colpodella spp. in 474 Ixodes persulcatus ticks collected in woodlands around the patient’s living area in the Mudanjiang area in 2015 with the same PCR assay, followed by direct sequencing, and subsequently found two I. persulcatus ticks positive for Colpodella spp. The detection of Colpodella spp. DNA in both the CSF of a patient with tick bite history along with isolation in ticks from the same region warrants deeper investigations.",Neither,0.0,0.0,Neither,Neither,0.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a majority of similar cases classified as ""Neither,"" with only one case indicating a history of cancer. The initial AI classification confidently identified the patient as having neither cancer nor diabetes, citing the absence of relevant terms, treatments, or lab values in the discharge summary. Direct examination of the patient text confirms no mention of cancer or diabetes, with the primary diagnosis being Lyme disease. Given the strong agreement between the retrieval context and initial classification, and the lack of evidence in the patient text, the final classification is ""Neither"" with high confidence."
+1809,"Discharge Summary:
+
+Patient Name: [Redacted]
+Age: 89
+Gender: Male
+
+Hospital Course:
+The patient was admitted to the hospital with complaints of fatigue, rigors, and fever one day after his first ever hemodialysis session. The patient's hemoglobin acutely decreased, and a fecal occult blood was positive. Further investigation revealed a 5-centimeter mass in the right upper lobe of the lung, MRSA infection, and a 50-millimeter noncircumferential bleeding mass in the gastric cardia. The biopsy report showed a high grade malignant neoplasm with immunohistochemistry positive for cytokeratin CAM 5.2, polytypic cytokeratin, and 4 different melanoma markers. A CT scan of the abdomen and pelvis confirmed metastatic disease involving the dome of the liver. Based on the patient's history of melanoma and biopsy findings, the diagnosis of metastatic malignant melanoma to the stomach was made. The patient was started on treatment with nivolumab, but unfortunately, he decompensated 2 months after his diagnosis was made and was enrolled in hospice care.
+
+Diagnosis:
+1. End stage renal disease
+2. Hemodialysis
+3. Localized melanoma of the chest
+4. Metastatic malignant melanoma to the stomach
+5. MRSA infection
+6. Anemia
+7. Gastric bleeding
+8. Metastatic disease involving the liver
+
+Treatment:
+1. Nivolumab
+
+Follow-up Care:
+The patient has been enrolled in hospice care.",Cancer Only,1.0,0.0,Cancer Only,Cancer Only,1.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows a strong pattern of cancer diagnoses in similar cases, with four out of five cases classified as having cancer. The initial AI classification confidently identified the presence of cancer, citing explicit evidence of metastatic malignant melanoma confirmed by biopsy and ongoing treatment with nivolumab. The patient discharge summary corroborates this with detailed documentation of metastatic melanoma and related treatments. There is no mention of diabetes or any related treatments or lab values in the patient text, supporting the decision to classify as Cancer Only with high confidence."
+645,"Discharge Summary:
+
+Patient: [Name]
+
+Medical Record Number: [Number]
+
+Date of Admission: [Date]
+
+Date of Discharge: [Date]
+
+Hospital Course:
+
+The patient, a 7-year-old girl of Indian descent presented with complaints of hypochromic linear bands in two regions, which had persisted for one year. The lesions were present on the right forearm and left leg and buttocks without any associated pruritus, pain, hair loss, or nail involvement. No biopsies were taken at the request of the patient's parents. The patient was diagnosed with Lichen striatus and advised observation with explanation of the disease course. A follow-up visit was scheduled but the patient did not return to the clinic.
+
+Final Diagnosis:
+
+Lichen striatus (LS).
+
+Recommendations:
+
+The patient was advised to keep a watch on the hypopigmented lichenoid macules. The parents were offered the option of a biopsy to confirm the diagnosis or follow-up visits. If the lesions had progressed, medical management could be considered after appropriate evaluation.
+
+Patient Education:
+
+The diagnosis, LS, was explained to the patient's parents. The natural course of the disease was reviewed, and it was explained that the condition is self-limiting and resolves spontaneously within a year or two. The parents were advised to avoid traumatic stimuli to prevent Koebnerization.
+
+Follow-Up:
+
+A follow-up was scheduled at a convenient date for the patient.",Neither,0.0,0.0,Neither,Neither,0.0,0.0,1.0,1.0,True,True,True,"The retrieval context shows all similar cases classified as ""Neither"" with no evidence of cancer or diabetes, supporting a pattern of benign conditions. The initial AI classification also confidently identified the case as ""Neither,"" citing the absence of any cancer or diabetes indicators. Direct examination of the patient text confirms a diagnosis of Lichen striatus, a benign skin condition, with no mention of cancer or diabetes. Given the consistent evidence across all sources, the final classification is ""Neither"" with high confidence."

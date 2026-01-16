@@ -6,12 +6,17 @@ This script trains and evaluates the LLM-based three-agent classification system
 The system combines similarity search (Agent 1), initial LLM classification (Agent 2),
 and final decision synthesis (Agent 3) using OpenAI GPT-4 and Astra DB vector store.
 
+Note: Vector store is always recreated to avoid duplicate records.
+
 Usage:
-    python scripts/run_experimental.py --data_file layer_health_data.csv --recreate_vector_store
+    python scripts/run_experimental.py --data_file layer_health_data.csv
 
 Arguments:
     --data_file: Path to clinical data CSV file
-    --recreate_vector_store: Flag to recreate vector store (default: False)
+    --collection_name: Name for Astra DB collection (default: patient_embeddings)
+    --top_k: Number of similar cases to retrieve (default: 5)
+    --random_state: Random seed for reproducibility (default: 42)
+    --model: OpenAI model to use (default: gpt-4o)
 
 Output:
     - results/llm_agents_test_output.csv: Predictions on test set
@@ -26,6 +31,7 @@ import os
 import sys
 from dotenv import load_dotenv
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from sklearn.model_selection import train_test_split
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models.experimental import LLMAgentSystem
@@ -137,12 +143,13 @@ def save_llm_test_predictions(results_df, output_dir='results', dataset_name='va
 def run_llm_agents(
     data_file='layer_health_data.csv',
     collection_name='patient_embeddings',
-    recreate_vector_store=True,
     top_k=5,
     config=None
 ):
     """
     Run LLM three-agent system pipeline
+    
+    Note: Vector store is always recreated with fresh training data to avoid duplicates.
     
     Parameters:
     -----------
@@ -150,8 +157,6 @@ def run_llm_agents(
         Path to data file
     collection_name : str
         Name for Astra DB collection
-    recreate_vector_store : bool
-        Whether to recreate vector store or load existing
     top_k : int
         Number of similar cases to retrieve
     config : dict, optional
@@ -183,74 +188,67 @@ def run_llm_agents(
     print(f"\nLoading data from: {data_file}")
     df = load_data(data_file, generate_embeddings=True)
     
-    # STEP 1: Create stratified split (using same logic as baseline)
+    # STEP 1: Create stratified split using train_test_split
     print("\n" + "="*80)
     print("STEP 1: CREATING STRATIFIED TRAIN/VALIDATION SPLIT")
     print("="*80)
     
     # Get all labeled examples (test_set=0)
-    all_labeled = df[(df['test_set'] == 0) & 
-                     (df['has_cancer'].notna()) & 
-                     (df['has_diabetes'].notna())].copy()
-    all_labeled['combined_label'] = all_labeled.apply(get_combined_label, axis=1)
+    df_labeled = df[(df['test_set'] == 0) & 
+                    (df['has_cancer'].notna()) & 
+                    (df['has_diabetes'].notna())].copy()
     
-    # Sampling strategy (matching baseline)
-    sampling_strategy = {
-        'Neither': 0.25,
-        'Cancer Only': 0.30,  
-        'Diabetes Only': 0.67,
-        'Both': 0.50
-    }
+    # Create a combined label column for stratification
+    def create_combined_label(row):
+        has_cancer = row['has_cancer'] == 1.0
+        has_diabetes = row['has_diabetes'] == 1.0
+        
+        if has_cancer and has_diabetes:
+            return 'Both'
+        elif has_cancer:
+            return 'Cancer Only'
+        elif has_diabetes:
+            return 'Diabetes Only'
+        else:
+            return 'Neither'
     
-    val_samples = []
-    train_samples = []
+    df_labeled['combined_label'] = df_labeled.apply(create_combined_label, axis=1)
     
     random_state = config.get('random_state', 42) if config else 42
     
-    for label, val_fraction in sampling_strategy.items():
-        label_data = all_labeled[all_labeled['combined_label'] == label]
-        n_total = len(label_data)
-        n_val = max(1, int(n_total * val_fraction))
-        
-        label_shuffled = label_data.sample(frac=1, random_state=random_state)
-        val_samples.append(label_shuffled.iloc[:n_val])
-        train_samples.append(label_shuffled.iloc[n_val:])
+    # Stratified split (80/20)
+    df_train, df_val = train_test_split(
+        df_labeled,
+        test_size=0.2,  # 20% for validation
+        stratify=df_labeled['combined_label'],
+        random_state=random_state
+    )
     
-    df_train = pd.concat(train_samples, ignore_index=True)
-    df_val = pd.concat(val_samples, ignore_index=True)
+    # Verify stratification worked
+    print("\nTraining Set Distribution")
+    print("=" * 50)
+    print(df_train['combined_label'].value_counts())
+    print(f"\nTotal: {len(df_train)}")
+    print()
     
-    print(f"\nTrain set: {len(df_train)} examples")
-    print(f"  Distribution: {df_train['combined_label'].value_counts().to_dict()}")
-    print(f"\nValidation set: {len(df_val)} examples")
-    print(f"  Distribution: {df_val['combined_label'].value_counts().to_dict()}")
+    print("Validation Set Distribution")
+    print("=" * 50)
+    print(df_val['combined_label'].value_counts())
+    print(f"\nTotal: {len(df_val)}")
+    print()
     
-    # STEP 2: Create or load vector store
+    # STEP 2: Create vector store (always drop existing to avoid duplicates)
     print("\n" + "="*80)
     print("STEP 2: VECTOR STORE SETUP")
     print("="*80)
     
-    if recreate_vector_store:
-        print("Creating vector store with training data...")
-        vector_store = create_vector_store(
-            df_train,
-            collection_name=collection_name,
-            drop_existing=True
-        )
-        print(f"[OK] Vector store created with {len(df_train)} examples")
-    else:
-        print("Loading existing vector store...")
-        try:
-            vector_store = load_vector_store(collection_name=collection_name)
-            print("[OK] Vector store loaded")
-        except Exception as e:
-            print(f"⚠ Could not load vector store: {e}")
-            print("Creating new vector store...")
-            vector_store = create_vector_store(
-                df_train,
-                collection_name=collection_name,
-                drop_existing=True
-            )
-            print(f"[OK] Vector store created with {len(df_train)} examples")
+    print("Creating vector store with training data (dropping existing to avoid duplicates)...")
+    vector_store = create_vector_store(
+        df_train,
+        collection_name=collection_name,
+        drop_existing=True  # Always drop to prevent duplicate records
+    )
+    print(f"[OK] Vector store created with {len(df_train)} examples")
     
     # STEP 3: Run on validation set
     print("\n" + "="*80)
@@ -360,6 +358,7 @@ def run_llm_agents(
     
     # Save validation results
     save_llm_evaluation(val_results_df)
+    save_llm_test_predictions(val_results_df, dataset_name='validation')
     
     # STEP 5: Run on official test set (test_set=1)
     print("\n" + "="*80)
@@ -443,8 +442,6 @@ if __name__ == "__main__":
                         help='Name of data file')
     parser.add_argument('--collection_name', type=str, default='patient_embeddings',
                         help='Astra DB collection name')
-    parser.add_argument('--recreate_vector_store', action='store_true',
-                        help='Recreate vector store (default: False)')
     parser.add_argument('--top_k', type=int, default=5,
                         help='Number of similar cases to retrieve')
     parser.add_argument('--random_state', type=int, default=42,
@@ -461,7 +458,6 @@ if __name__ == "__main__":
     results = run_llm_agents(
         data_file=args.data_file,
         collection_name=args.collection_name,
-        recreate_vector_store=args.recreate_vector_store,
         top_k=args.top_k,
         config=config
     )
