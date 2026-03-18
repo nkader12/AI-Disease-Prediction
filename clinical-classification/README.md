@@ -110,7 +110,7 @@ Results are saved to the `results/` directory:
 
 Run unit tests:
 ```bash
-python unit_tests/test_preprocessing.py --data_file layer_health_data.csv
+python unit_tests/test_preprocessing.py --data_file data.csv
 python unit_tests/test_embeddings.py
 python unit_tests/test_vectore_db.py
 ```
