@@ -114,7 +114,3 @@ python unit_tests/test_preprocessing.py --data_file clinical_data.csv
 python unit_tests/test_embeddings.py
 python unit_tests/test_vectore_db.py
 ```
-
-## License
-
-Proprietary - Clinical Classification
