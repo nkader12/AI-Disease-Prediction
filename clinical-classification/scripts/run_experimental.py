@@ -9,7 +9,7 @@ and final decision synthesis (Agent 3) using OpenAI GPT-4 and Astra DB vector st
 Note: Vector store is always recreated to avoid duplicate records.
 
 Usage:
-    python scripts/run_experimental.py --data_file layer_health_data.csv
+    python scripts/run_experimental.py --data_file clinical_data.csv
 
 Arguments:
     --data_file: Path to clinical data CSV file
@@ -141,7 +141,7 @@ def save_llm_test_predictions(results_df, output_dir='results', dataset_name='va
 
 
 def run_llm_agents(
-    data_file='layer_health_data.csv',
+    data_file='clinical_data.csv',
     collection_name='patient_embeddings',
     top_k=5,
     config=None
@@ -438,7 +438,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='Run LLM three-agent system')
-    parser.add_argument('--data_file', type=str, default='layer_health_data.csv',
+    parser.add_argument('--data_file', type=str, default='clinical_data.csv',
                         help='Name of data file')
     parser.add_argument('--collection_name', type=str, default='patient_embeddings',
                         help='Astra DB collection name')

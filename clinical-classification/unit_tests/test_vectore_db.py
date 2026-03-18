@@ -1,7 +1,7 @@
 # unit_tests/test_vector_db_load.py
 """
 Test Astra DB vector store loading and similarity search
-Usage: python unit_tests/test_vector_db_load.py --data_file layer_health_data.csv
+Usage: python unit_tests/test_vector_db_load.py --data_file clinical_data.csv
 """
 
 import argparse
@@ -215,7 +215,7 @@ def run_all_tests(data_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Test Astra DB vector store')
-    parser.add_argument('--data_file', type=str, default='layer_health_data.csv',
+    parser.add_argument('--data_file', type=str, default='clinical_data.csv',
                         help='Name of data file')
     args = parser.parse_args()
     

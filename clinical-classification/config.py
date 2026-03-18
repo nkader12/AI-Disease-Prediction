@@ -14,7 +14,7 @@ from typing import Dict, Any
 
 DATA_CONFIG: Dict[str, Any] = {
     # Data file paths
-    'data_file': 'layer_health_data.csv',
+    'data_file': 'clinical_data.csv',
     'processed_dir': 'data/processed/',
     
     # Train/validation/test split ratios

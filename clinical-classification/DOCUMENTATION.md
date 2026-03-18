@@ -33,7 +33,7 @@ clinical-classification/
 │
 ├── data/                    # Data directory
 │   ├── README.md            # Data documentation
-│   ├── layer_health_data.csv
+│   ├── clinical_data.csv
 │   └── processed/           # Cached processed data
 │
 ├── models/                  # Model implementations
@@ -191,7 +191,7 @@ ASTRA_DB_API_ENDPOINT=https://...   # Astra DB endpoint
 
 ### Running Tests
 ```bash
-python unit_tests/test_preprocessing.py --data_file layer_health_data.csv
+python unit_tests/test_preprocessing.py --data_file clinical_data.csv
 python unit_tests/test_embeddings.py
 python unit_tests/test_vectore_db.py
 ```

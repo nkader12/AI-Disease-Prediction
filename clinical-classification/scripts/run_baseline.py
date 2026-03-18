@@ -7,7 +7,7 @@ discharge summaries. The ensemble combines regex patterns, logistic regression,
 random forest, and semi-supervised learning.
 
 Usage:
-    python scripts/run_baseline.py --data_file layer_health_data.csv
+    python scripts/run_baseline.py --data_file clinical_data.csv
 
 Output:
     - results/baseline_test_output.csv: Predictions on test set
@@ -139,14 +139,14 @@ def save_test_predictions(df_test, predictions, decision_log, output_dir='result
     return output_file
 
 
-def run_baseline(data_file='layer_health_data.csv', config=None, val_size=0.2):
+def run_baseline(data_file='clinical_data.csv', config=None, val_size=0.2):
     """
     Run complete baseline ensemble pipeline
     
     Parameters:
     -----------
     data_file : str
-        Path to data file (default: 'layer_health_data.csv')
+        Path to data file (default: 'clinical_data.csv')
     config : dict, optional
         Configuration parameters for ensemble
     val_size : float
@@ -352,7 +352,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='Run baseline ensemble pipeline')
-    parser.add_argument('--data_file', type=str, default='layer_health_data.csv',
+    parser.add_argument('--data_file', type=str, default='clinical_data.csv',
                         help='Name of data file')
     parser.add_argument('--random_state', type=int, default=42,
                         help='Random seed for reproducibility')

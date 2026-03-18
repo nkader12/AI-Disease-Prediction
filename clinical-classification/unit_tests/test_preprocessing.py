@@ -1,7 +1,7 @@
 # unit_tests/test_preprocessing_with_embeddings.py
 """
 Full preprocessing pipeline test with embeddings
-Usage: python unit_tests/test_preprocessing_with_embeddings.py --data_file layer_health_data.csv
+Usage: python unit_tests/test_preprocessing_with_embeddings.py --data_file clinical_data.csv
 """
 
 import argparse
@@ -183,7 +183,7 @@ def test_full_pipeline(data_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Test full preprocessing pipeline')
-    parser.add_argument('--data_file', type=str, default='layer_health_data.csv',
+    parser.add_argument('--data_file', type=str, default='clinical_data.csv',
                         help='Name of data file')
     args = parser.parse_args()
     
