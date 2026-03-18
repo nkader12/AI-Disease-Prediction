@@ -16,7 +16,7 @@ clinical-classification/
 ├── requirements.txt          # Python dependencies
 ├── .env.example             # Environment variables template
 ├── data/                    # Data directory
-│   └── layer_health_data.csv
+│   └── data.csv
 ├── models/                  # Model implementations
 │   ├── baseline.py          # Baseline ensemble classifier
 │   └── experimental.py      # LLM three-agent system
@@ -59,12 +59,12 @@ ASTRA_DB_API_ENDPOINT=your_astra_endpoint
 
 ### Run Baseline Model
 ```bash
-python scripts/run_baseline.py --data_file layer_health_data.csv
+python scripts/run_baseline.py --data_file data.csv
 ```
 
 ### Run LLM Agent System
 ```bash
-python scripts/run_experimental.py --data_file layer_health_data.csv --recreate_vector_store
+python scripts/run_experimental.py --data_file data.csv --recreate_vector_store
 ```
 
 ### Compare Models
@@ -114,7 +114,3 @@ python unit_tests/test_preprocessing.py --data_file layer_health_data.csv
 python unit_tests/test_embeddings.py
 python unit_tests/test_vectore_db.py
 ```
-
-## License
-
-Proprietary - Layer Health
