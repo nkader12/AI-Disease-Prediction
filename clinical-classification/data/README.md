@@ -4,7 +4,7 @@ This directory contains clinical discharge summary data for classification.
 
 ## Data Files
 
-### `layer_health_data.csv`
+### `data.csv`
 Main dataset containing clinical discharge summaries with the following columns:
 
 - `patient_identifier`: Unique patient ID
